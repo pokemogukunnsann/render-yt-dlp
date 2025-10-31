@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>エラーが発生しました</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container { max-width: 600px; margin-top: 50px; }
+        .error-box {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">🚨 エラー</h2>
+        <div class="error-box">
+            <h5 class="mb-3">エラーメッセージ:</h5>
+            <p>{{ message }}</p>
+            <hr>
+            <p class="text-muted msmall">
+                URLが正しいか、またはログインが必須の動画ではないか確認してください。
+            </p>
+            <div class="text-center">
+                <a href="/YouTubeMP3modoki/" class="btn btn-danger mt-4">↩ 戻って再試行</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
