@@ -131,7 +131,8 @@ def get_download_link():
     try:
         # --- 💡 yt-dlp コマンドライン実行の構築 ---
         command = [
-            'yt-dlp',
+            sys.executable,  # 💡 現在のPythonインタープリタのフルパス
+            '-m', 'yt_dlp',
             '--format', format_selector,  # '18'
             '--skip-download',
             '--simulate',
