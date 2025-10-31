@@ -1,0 +1,1759 @@
+<html lang="ja"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YouTubeMP3もどき</title>
+	<meta name="description" content="YouTube・ニコニコ動画・SoundCloud などの動画・音声を MP3 や MP4 などに変換してダウンロードできるサイトです。">
+ 
+	<!-- Manifest -->
+	<meta name="theme-color" content="#f0f0f0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="manifest.webmanifest">
+ 
+	<!-- OGP -->
+    <meta property="og:type" content="website">
+	<meta property="og:description" content="YouTube・ニコニコ動画・SoundCloud などの動画・音声を MP3 や MP4 などに変換してダウンロードできるサイトです。">
+	<meta property="og:title" content="YouTubeMP3もどき">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:url" content="https://receive.shamimomo.net/YouTubeMP3modoki/">
+	<meta property="og:image" content="https://receive.shamimomo.net/YouTubeMP3modoki/assets/images/icons/logo.png">
+	<!-- /OGP -->
+ 
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:description" content="YouTube・ニコニコ動画・SoundCloud などの動画・音声を MP3 や MP4 などに変換してダウンロードできるサイトです。">
+	<meta name="twitter:title" content="YouTubeMP3もどき">
+	<meta name="twitter:url" content="https://receive.shamimomo.net/YouTubeMP3modoki/">
+	<meta name="twitter:image" content="https://receive.shamimomo.net/YouTubeMP3modoki/assets/images/icons/logo.png">
+	<!-- /Twitter Card -->
+ 
+	<!-- JavaScript -->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CZHZHW3J4W&amp;cx=c&amp;gtm=4e5at1"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+ 
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/YouTubeMP3modoki/assets/style.css">
+ 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154191901-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+ 
+		gtag('config', 'UA-154191901-1');
+	</script>
+ 
+	<!-- Web フォント -->
+	<style>
+        @font-face {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/OpenSans-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/OpenSans-Bold.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'YakuHanJPs';
+            font-weight: 500;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/YakuHanJPs-Medium.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'YakuHanJPs';
+            font-weight: 700;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/YakuHanJPs-Bold.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Noto Sans JP';
+            font-weight: 500;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/NotoSansJP-Medium.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Noto Sans JP';
+            font-weight: 700;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/NotoSansJP-Bold.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Twemoji';
+            font-weight: normal;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/Twemoji.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Material Design Icons';
+            font-weight: normal;
+            font-display: swap;
+            src: url('/YouTubeMP3modoki/assets/fonts/MaterialDesignIcons.woff2') format('woff2');
+        }
+	</style>
+  <script type="module" crossorigin="" src="/YouTubeMP3modoki/assets/index-GqrNTsqB.js"></script>
+  <link rel="stylesheet" crossorigin="" href="/YouTubeMP3modoki/assets/index.DI3dS5Mr.css">
+<style>
+	:root{--balloon-border-radius:2px;
+		  --balloon-color:#101010f2;
+		  --balloon-text-color:#fff;
+		  --balloon-font-size:12px;
+		  --balloon-move:4px}
+	button[aria-label][data-balloon-pos]{overflow:visible}[aria-label][data-balloon-pos]{cursor:pointer;
+																						 position:relative}[aria-label][data-balloon-pos]:after{background:var(--balloon-color);
+																																				border-radius:2px;
+																																				border-radius:var(--balloon-border-radius);
+																																				color:var(--balloon-text-color);
+																																				content:attr(aria-label);
+																																				font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+																																				font-size:var(--balloon-font-size);
+																																				font-style:normal;
+																																				font-weight:400;padding:.5em 1em;
+																																				text-indent:0;
+																																				text-shadow:none;
+																																				white-space:nowrap
+}[aria-label][data-balloon-pos]:after,[aria-label][data-balloon-pos]:before{opacity:0;
+																			pointer-events:none;
+																			position:absolute;
+																			transition:all .18s ease-out .18s;
+																			z-index:10
+																		   }
+	[aria-label][data-balloon-pos]:before{border:5px solid #0000;border-top:5px solid var(--balloon-color);content:"";height:0;width:0}
+	[aria-label][data-balloon-pos]:hover:after,[aria-label][data-balloon-pos]:hover:before,[aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:after,[aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:before,[aria-label][data-balloon-pos][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-visible]:before{opacity:1;pointer-events:none}[aria-label][data-balloon-pos].font-awesome:after{font-family:FontAwesome,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif}
+	[aria-label][data-balloon-pos][data-balloon-break]:after{white-space:pre}
+	[aria-label][data-balloon-pos][data-balloon-break][data-balloon-length]:after{white-space:pre-line;word-break:break-word}
+	[aria-label][data-balloon-pos][data-balloon-blunt]:after,[aria-label][data-balloon-pos][data-balloon-blunt]:before{transition:none}
+	[aria-label][data-balloon-pos][data-balloon-pos=down]:hover:after,[aria-label][data-balloon-pos][data-balloon-pos=down]:hover:before,[aria-label][data-balloon-pos][data-balloon-pos=down][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-pos=down][data-balloon-visible]:before,[aria-label][data-balloon-pos][data-balloon-pos=up]:hover:after,[aria-label][data-balloon-pos][data-balloon-pos=up]:hover:before,[aria-label][data-balloon-pos][data-balloon-pos=up][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-pos=up][data-balloon-visible]:before{transform:translate(-50%)}
+	[aria-label][data-balloon-pos][data-balloon-pos*=-left]:after{left:0}
+	[aria-label][data-balloon-pos][data-balloon-pos*=-left]:before{left:5px}
+	[aria-label][data-balloon-pos][data-balloon-pos*=-right]:after{right:0}
+	[aria-label][data-balloon-pos][data-balloon-pos*=-right]:before{right:5px}
+	[aria-label][data-balloon-pos][data-balloon-po*=-left]:hover:after,[aria-label][data-balloon-pos][data-balloon-po*=-left]:hover:before,[aria-label][data-balloon-pos][data-balloon-po*=-left][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-po*=-left][data-balloon-visible]:before,[aria-label][data-balloon-pos][data-balloon-pos*=-right]:hover:after,[aria-label][data-balloon-pos][data-balloon-pos*=-right]:hover:before,[aria-label][data-balloon-pos][data-balloon-pos*=-right][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-pos*=-right][data-balloon-visible]:before{transform:translate(0)}
+	[aria-label][data-balloon-pos][data-balloon-pos^=up]:after,[aria-label][data-balloon-pos][data-balloon-pos^=up]:before{bottom:100%;transform:translateY(var(--balloon-move));transform-origin:top}[aria-label][data-balloon-pos][data-balloon-pos^=up]:after{margin-bottom:10px}[aria-label][data-balloon-pos][data-balloon-pos=up]:after,[aria-label][data-balloon-pos][data-balloon-pos=up]:before{left:50%;transform:translate(-50%,var(--balloon-move))}[aria-label][data-balloon-pos][data-balloon-pos^=down]:after,[aria-label][data-balloon-pos][data-balloon-pos^=down]:before{top:100%;transform:translateY(calc(var(--balloon-move)*-1))}[aria-label][data-balloon-pos][data-balloon-pos^=down]:after{margin-top:10px}[aria-label][data-balloon-pos][data-balloon-pos^=down]:before{border:5px solid #0000;border-bottom:5px solid var(--balloon-color);height:0;width:0}[aria-label][data-balloon-pos][data-balloon-pos=down]:after,[aria-label][data-balloon-pos][data-balloon-pos=down]:before{left:50%;transform:translate(-50%,calc(var(--balloon-move)*-1))}[aria-label][data-balloon-pos][data-balloon-pos=left]:hover:after,[aria-label][data-balloon-pos][data-balloon-pos=left]:hover:before,[aria-label][data-balloon-pos][data-balloon-pos=left][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-pos=left][data-balloon-visible]:before,[aria-label][data-balloon-pos][data-balloon-pos=right]:hover:after,[aria-label][data-balloon-pos][data-balloon-pos=right]:hover:before,[aria-label][data-balloon-pos][data-balloon-pos=right][data-balloon-visible]:after,[aria-label][data-balloon-pos][data-balloon-pos=right][data-balloon-visible]:before{transform:translateY(-50%)}[aria-label][data-balloon-pos][data-balloon-pos=left]:after,[aria-label][data-balloon-pos][data-balloon-pos=left]:before{right:100%;top:50%;transform:translate(var(--balloon-move),-50%)}[aria-label][data-balloon-pos][data-balloon-pos=left]:after{margin-right:10px}[aria-label][data-balloon-pos][data-balloon-pos=left]:before{border:5px solid #0000;border-left:5px solid var(--balloon-color);height:0;width:0}[aria-label][data-balloon-pos][data-balloon-pos=right]:after,[aria-label][data-balloon-pos][data-balloon-pos=right]:before{left:100%;top:50%;transform:translate(calc(var(--balloon-move)*-1),-50%)}[aria-label][data-balloon-pos][data-balloon-pos=right]:after{margin-left:10px}[aria-label][data-balloon-pos][data-balloon-pos=right]:before{border:5px solid #0000;border-right:5px solid var(--balloon-color);height:0;width:0}[aria-label][data-balloon-pos][data-balloon-length]:after{white-space:normal}[aria-label][data-balloon-pos][data-balloon-length=small]:after{width:80px}[aria-label][data-balloon-pos][data-balloon-length=medium]:after{width:150px}[aria-label][data-balloon-pos][data-balloon-length=large]:after{width:260px}[aria-label][data-balloon-pos][data-balloon-length=xlarge]:after{width:380px}@media screen and (max-width:768px){[aria-label][data-balloon-pos][data-balloon-length=xlarge]:after{width:90vw}}
+	[aria-label][data-balloon-pos][data-balloon-length=fit]:after{width:100%}
+ </style>
+	<style>@keyframes my-face{2%{transform:translateY(1.5px) rotate(1.5deg)}4%{transform:translateY(-1.5px) rotate(-.5deg)}6%{transform:translateY(1.5px) rotate(-1.5deg)}8%{transform:translateY(-1.5px) rotate(-1.5deg)}10%{transform:translateY(2.5px) rotate(1.5deg)}12%{transform:translateY(-.5px) rotate(1.5deg)}14%{transform:translateY(-1.5px) rotate(1.5deg)}16%{transform:translateY(-.5px) rotate(-1.5deg)}18%{transform:translateY(.5px) rotate(-1.5deg)}20%{transform:translateY(-1.5px) rotate(2.5deg)}22%{transform:translateY(.5px) rotate(-1.5deg)}24%{transform:translateY(1.5px) rotate(1.5deg)}26%{transform:translateY(.5px) rotate(.5deg)}28%{transform:translateY(.5px) rotate(1.5deg)}30%{transform:translateY(-.5px) rotate(2.5deg)}32%{transform:translateY(1.5px) rotate(-.5deg)}34%{transform:translateY(1.5px) rotate(-.5deg)}36%{transform:translateY(-1.5px) rotate(2.5deg)}38%{transform:translateY(1.5px) rotate(-1.5deg)}40%{transform:translateY(-.5px) rotate(2.5deg)}42%{transform:translateY(2.5px) rotate(-1.5deg)}44%{transform:translateY(1.5px) rotate(.5deg)}46%{transform:translateY(-1.5px) rotate(2.5deg)}48%{transform:translateY(-.5px) rotate(.5deg)}50%{transform:translateY(.5px) rotate(.5deg)}52%{transform:translateY(2.5px) rotate(2.5deg)}54%{transform:translateY(-1.5px) rotate(1.5deg)}56%{transform:translateY(2.5px) rotate(2.5deg)}58%{transform:translateY(.5px) rotate(2.5deg)}60%{transform:translateY(2.5px) rotate(2.5deg)}62%{transform:translateY(-.5px) rotate(2.5deg)}64%{transform:translateY(-.5px) rotate(1.5deg)}66%{transform:translateY(1.5px) rotate(-.5deg)}68%{transform:translateY(-1.5px) rotate(-.5deg)}70%{transform:translateY(1.5px) rotate(.5deg)}72%{transform:translateY(2.5px) rotate(1.5deg)}74%{transform:translateY(-.5px) rotate(.5deg)}76%{transform:translateY(-.5px) rotate(2.5deg)}78%{transform:translateY(-.5px) rotate(1.5deg)}80%{transform:translateY(1.5px) rotate(1.5deg)}82%{transform:translateY(-.5px) rotate(.5deg)}84%{transform:translateY(1.5px) rotate(2.5deg)}86%{transform:translateY(-1.5px) rotate(-1.5deg)}88%{transform:translateY(-.5px) rotate(2.5deg)}90%{transform:translateY(2.5px) rotate(-.5deg)}92%{transform:translateY(.5px) rotate(-.5deg)}94%{transform:translateY(2.5px) rotate(.5deg)}96%{transform:translateY(-.5px) rotate(1.5deg)}98%{transform:translateY(-1.5px) rotate(-.5deg)}0%,to{transform:translate(0) rotate(0deg)}}.dplayer{line-height:1;overflow:hidden;position:relative;user-select:none;-webkit-user-select:none}.dplayer *{box-sizing:initial}.dplayer svg{height:100%;width:100%}.dplayer svg circle,.dplayer svg path{fill:#fff}.dplayer.dplayer-fulled,.dplayer.dplayer-fulled-browser{background:#000;height:100%!important;left:0;margin:0;padding:0;position:fixed;top:0;transform:translate(0);width:100%!important;z-index:100000}
+	.dplayer.dplayer-live .dplayer-bar-wrap,.dplayer.dplayer-live .dplayer-time,.dplayer.dplayer-no-audio-switching .dplayer-setting-box .dplayer-setting-audio,.dplayer.dplayer-no-danmaku .dplayer-controller .dplayer-icons .dplayer-comment,.dplayer.dplayer-no-danmaku .dplayer-danmaku,.dplayer.dplayer-no-danmaku .dplayer-setting-box .dplayer-setting-danmaku,.dplayer.dplayer-no-danmaku .dplayer-setting-box .dplayer-setting-danunlimit,.dplayer.dplayer-no-danmaku .dplayer-setting-box .dplayer-setting-showdan{display:none}.dplayer.dplayer-live .dplayer-notice{bottom:56px}.dplayer.dplayer-live .dplayer-setting-loop,.dplayer.dplayer-live .dplayer-setting-speed{display:none}.dplayer.dplayer-live .dplayer-controller .dplayer-icons .dplayer-setting-box{height:auto;overflow-y:hidden}.dplayer.dplayer-live .dplayer-mobile-icon-backward,.dplayer.dplayer-live .dplayer-mobile-icon-forward{display:none}.dplayer.dplayer-live .dplayer-comment-setting-box,.dplayer.dplayer-live .dplayer-setting-box{bottom:58px;max-height:calc(100% - 66px)}.dplayer.dplayer-live.dplayer-mobile .dplayer-comment-setting-box,.dplayer.dplayer-live.dplayer-mobile .dplayer-setting-box{bottom:52px;max-height:calc(100% - 60px)}.dplayer.dplayer-narrow .dplayer-danmaku{font-size:18px}.dplayer.dplayer-narrow .dplayer-icon{margin:0 -3px}.dplayer.dplayer-playing .dplayer-danmaku .dplayer-danmaku-move{animation-play-state:running}.dplayer.dplayer-playing .dplayer-controller,.dplayer.dplayer-playing .dplayer-controller-mask{opacity:0}.dplayer.dplayer-playing:hover .dplayer-controller,.dplayer.dplayer-playing:hover .dplayer-controller-mask{opacity:1}.dplayer.dplayer-loading .dplayer-bezel .dplayer-loading-icon{display:block}.dplayer.dplayer-loading .dplayer-danmaku,.dplayer.dplayer-loading .dplayer-danmaku-move,.dplayer.dplayer-paused .dplayer-danmaku,.dplayer.dplayer-paused .dplayer-danmaku-move{animation-play-state:paused}.dplayer.dplayer-show-controller .dplayer-controller,.dplayer.dplayer-show-controller .dplayer-controller-mask{opacity:1}.dplayer.dplayer-fulled{height:100%!important;left:0;position:fixed!important;top:0;width:100%!important;z-index:100000}.dplayer.dplayer-fulled.dplayer-hide-controller{cursor:none}.dplayer.dplayer-fulled.dplayer-hide-controller .dplayer-controller,.dplayer.dplayer-fulled.dplayer-hide-controller .dplayer-controller-mask{opacity:0!important}.dplayer.dplayer-fulled-browser.dplayer-hide-controller{cursor:none}.dplayer.dplayer-fulled-browser.dplayer-hide-controller .dplayer-controller,.dplayer.dplayer-fulled-browser.dplayer-hide-controller .dplayer-controller-mask{opacity:0!important}.dplayer.dplayer-mobile .dplayer-controller{height:44px}.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons{padding-bottom:3px;padding-top:3px}
+		.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons .dplayer-airplay-icon,.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons .dplayer-play-icon,.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons .dplayer-volume{display:none}.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons .dplayer-full .dplayer-full-in-icon,.dplayer.dplayer-mobile .dplayer-controller .dplayer-icons .dplayer-full .dplayer-pip-icon{display:inline-block;position:static}.dplayer.dplayer-mobile .dplayer-controller-mask{background:linear-gradient(#0000008c 78%,#000c);height:100%}.dplayer.dplayer-mobile.dplayer-playing .dplayer-controller,.dplayer.dplayer-mobile.dplayer-playing .dplayer-controller-mask{opacity:1}.dplayer.dplayer-mobile.dplayer-hide-controller .dplayer-controller-mask{opacity:0}.dplayer.dplayer-mobile.dplayer-hide-controller .dplayer-controller{opacity:0;transform:translateY(100%)}.dplayer.dplayer-mobile .dplayer-bar-wrap{bottom:35px}.dplayer.dplayer-mobile .dplayer-bar-wrap .dplayer-bar-time{display:none}.dplayer.dplayer-mobile .dplayer-comment-setting-box,.dplayer.dplayer-mobile .dplayer-setting-box{bottom:58px;max-height:calc(100% - 66px)}.dplayer.dplayer-mobile.dplayer-hide-controller .dplayer-mobile-icon-wrap{opacity:0;visibility:hidden}.dplayer.dplayer-mobile .dplayer-mobile-icon-wrap{opacity:.7;visibility:visible}.dplayer-web-fullscreen-fix{left:0;margin:0;padding:0;position:fixed;top:0}.dplayer [aria-label]{--balloon-font-size:11.5px}.dplayer [aria-label]:before{display:none}.dplayer [aria-label]:after{background:#111111b3!important;font-family:inherit!important;padding:.3em .8em!important}.dplayer [aria-label][data-balloon-pos=up]:after{margin-bottom:0!important}.dplayer-bezel{bottom:0;color:#fff;font-size:22px;left:0;pointer-events:none;position:absolute;right:0;top:0}.dplayer-bezel .dplayer-bezel-icon{background:#00000080;border-radius:50%;box-sizing:border-box;height:52px;left:50%;margin:-26px 0 0 -26px;opacity:0;padding:12px;pointer-events:none;position:absolute;top:50%;width:52px;will-change:transform}.dplayer-bezel .dplayer-bezel-icon.dplayer-bezel-transition{animation:bezel-hide .5s linear}@keyframes bezel-hide{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(2)}}.dplayer-bezel .dplayer-danloading{animation:my-face 5s ease-in-out infinite;font-size:14px;line-height:14px;margin-top:-7px;position:absolute;text-align:center;top:50%;width:100%}.dplayer-bezel .dplayer-loading-icon{display:none;height:36px;left:50%;margin:-18px 0 0 -18px;pointer-events:none;position:absolute;top:50%;width:36px}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-hide{display:none}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot{animation:dplayer-loading-dot-fade .8s ease infinite;opacity:0;transform-origin:4px 4px;will-change:transform}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-7{animation-delay:.7s}
+	.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-6{animation-delay:.6s}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-5{animation-delay:.5s}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-4{animation-delay:.4s}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-3{animation-delay:.3s}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-2{animation-delay:.2s}.dplayer-bezel .dplayer-loading-icon .dplayer-loading-dot.dplayer-loading-dot-1{animation-delay:.1s}@keyframes dplayer-loading-dot-fade{0%{opacity:.7;transform:scale(1.2)}50%{opacity:.25;transform:scale(.9)}to{opacity:.25;transform:scale(.85)}}.dplayer-controller-mask{background:linear-gradient(#0000 15%,#000000b3);height:98px;width:100%}.dplayer-controller,.dplayer-controller-mask{bottom:0;position:absolute;transition:all .3s ease}.dplayer-controller{height:50px;left:0;padding:0 20px;right:0;user-select:none;-webkit-user-select:none}.dplayer-controller.dplayer-controller-comment .dplayer-icons{display:none}.dplayer-controller.dplayer-controller-comment .dplayer-icons.dplayer-comment-box{display:block}.dplayer-controller .dplayer-bar-wrap{-webkit-tap-highlight-color:rgba(0,0,0,0);bottom:41px;cursor:pointer;height:3px;padding:10px 0;position:absolute;width:calc(100% - 40px)}.dplayer-controller .dplayer-bar-wrap:after{content:var(--thumbnail-url);height:0;overflow:hidden;position:absolute;width:0;z-index:-1}.dplayer-controller .dplayer-bar-wrap:hover .dplayer-bar .dplayer-played .dplayer-thumb{transform:scale(1)}.dplayer-controller .dplayer-bar-wrap:hover .dplayer-highlight{display:block;height:40%;top:4px;transform:translateX(-4px);width:8px}
+		.dplayer-controller .dplayer-bar-wrap .dplayer-highlight{background-color:#fff;border-radius:6px;height:20%;position:absolute;text-align:center;top:5px;transform:translateX(-3px);transition:all .2s ease-in-out;width:6px;z-index:12}.dplayer-controller .dplayer-bar-wrap .dplayer-highlight:hover .dplayer-highlight-text{display:block}.dplayer-controller .dplayer-bar-wrap .dplayer-highlight:hover~.dplayer-bar-preview,.dplayer-controller .dplayer-bar-wrap .dplayer-highlight:hover~.dplayer-bar-time{opacity:0}.dplayer-controller .dplayer-bar-wrap .dplayer-highlight .dplayer-highlight-text{background-color:#0000009e;border-radius:4px;color:#fff;display:none;font-size:12px;left:50%;padding:5px 8px;position:absolute;top:-24px;transform:translateX(-50%);white-space:nowrap}.dplayer-controller .dplayer-bar-wrap .dplayer-bar-preview{aspect-ratio:16/9;background:#131313;background-image:var(--thumbnail-url);background-repeat:no-repeat;background-size:16000px 100%;border-radius:6px;box-shadow:0 0 5px 0 #0000004d;display:none;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;pointer-events:none;position:absolute}.dplayer-controller .dplayer-bar-wrap .dplayer-bar-time{word-wrap:normal;background-color:#1f1f1fd9;border-radius:4px;color:#fff;font-size:12px;left:0;opacity:1;padding:6.5px 7px;pointer-events:none;position:absolute;text-align:center;top:-22px;transition:opacity .1s ease-in-out;word-break:normal;z-index:2}.dplayer-controller .dplayer-bar-wrap .dplayer-bar-time.hidden{opacity:0}.dplayer-controller .dplayer-bar-wrap .dplayer-bar{background:#fff3;cursor:pointer;height:4px;position:relative;width:100%}.dplayer-controller .dplayer-bar-wrap .dplayer-bar .dplayer-loaded{background:#fff;transition:all .5s ease}.dplayer-controller .dplayer-bar-wrap .dplayer-bar .dplayer-loaded,.dplayer-controller .dplayer-bar-wrap .dplayer-bar .dplayer-played{bottom:0;height:4px;left:0;position:absolute;top:0;will-change:width}.dplayer-controller .dplayer-bar-wrap .dplayer-bar .dplayer-played .dplayer-thumb{border-radius:50%;cursor:pointer;height:11px;margin-right:-10px;margin-top:-4px;position:absolute;right:5px;top:0;transform:scale(0);transition:all .3s ease-in-out;width:11px}.dplayer-controller .dplayer-icons{-webkit-tap-highlight-color:rgba(0,0,0,0);bottom:0;height:38px;padding-bottom:6px;padding-top:6px;position:absolute}.dplayer-controller .dplayer-icons.dplayer-comment-box{bottom:0;color:#fff;display:none;height:38px;left:20px;position:absolute;right:20px;transition:all .3s ease-in-out;z-index:2}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-icon{padding:7px}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-setting-icon{left:0;position:absolute;top:0}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-send-icon{position:absolute;right:0;top:0}
+	.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-send-icon[aria-label]:after{left:14%}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-input{background:none;border:none;border-radius:4px;box-sizing:border-box;color:#fff;font-family:inherit;font-size:14px;height:100%;line-height:18px;margin:0;outline:none;padding:8px 0;text-align:center;width:100%}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-input::placeholder{color:#fff;opacity:.8}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-input::-moz-focus-inner{border:0}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-input::-ms-clear{display:none}@media(max-width:350px){.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-setting-box{padding:9px 10px 15px}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-setting-box .dplayer-comment-setting-title{font-size:12px;line-height:24px}.dplayer-controller .dplayer-icons.dplayer-comment-box .dplayer-comment-input{font-size:12px}}.dplayer-controller .dplayer-icons.dplayer-icons-left .dplayer-icon{padding:7px}@media(max-width:500px){.dplayer-controller .dplayer-icons.dplayer-icons-left .dplayer-icon{padding-top:6px}}@media(max-width:350px){.dplayer-controller .dplayer-icons.dplayer-icons-left .dplayer-icon{padding-top:7px}}.dplayer-controller .dplayer-icons.dplayer-icons-right{right:20px}.dplayer-controller .dplayer-icons.dplayer-icons-right .dplayer-icon{padding:8px}@media(max-width:500px){.dplayer-controller .dplayer-icons.dplayer-icons-right .dplayer-icon{padding:7px;width:38px}}@media(max-width:350px){.dplayer-controller .dplayer-icons.dplayer-icons-right .dplayer-icon{padding:5px;width:31px}}.dplayer-controller .dplayer-icons .dplayer-time{color:#eee;font-family:inherit;font-size:13px;line-height:38px;text-shadow:0 0 2px #00000080;vertical-align:middle}
+		@media(max-width:350px){.dplayer-controller .dplayer-icons .dplayer-time{font-size:12px}}.dplayer-controller .dplayer-icons .dplayer-live-badge{align-items:center;color:#eee;cursor:pointer;display:inline-flex;font-family:inherit;font-size:13px;height:100%;line-height:18px;text-shadow:0 0 2px #00000080;vertical-align:middle}.dplayer-controller .dplayer-icons .dplayer-live-dot{border-radius:6px;content:"";display:inline-block;height:6px;margin-right:5px;vertical-align:4%;width:6px}.dplayer-controller .dplayer-icons .dplayer-icon{background-color:#0000;border:none;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;line-height:18px;outline:none;vertical-align:middle;width:40px}.dplayer-controller .dplayer-icons .dplayer-icon .dplayer-icon-content{opacity:.8;transition:all .2s ease-in-out}.dplayer-controller .dplayer-icons .dplayer-icon:hover .dplayer-icon-content{opacity:1}.dplayer-controller .dplayer-icons .dplayer-icon::-moz-focus-inner{border:0}.dplayer-controller .dplayer-icons .dplayer-icon.dplayer-comment-icon{padding:10.5px 9.5px 8px}@media(max-width:500px){.dplayer-controller .dplayer-icons .dplayer-icon.dplayer-comment-icon{padding:9px 9px 8px}}@media(max-width:350px){.dplayer-controller .dplayer-icons .dplayer-icon.dplayer-comment-icon{padding:6.5px 6.5px 6px}}.dplayer-controller .dplayer-icons .dplayer-icon.dplayer-volume-icon{width:43px}.dplayer-controller .dplayer-icons .dplayer-icon.dplayer-full-icon[aria-label]:after{left:1%}@media(max-width:350px){.dplayer-controller .dplayer-icons .dplayer-icon{width:35px}}.dplayer-controller .dplayer-icons .dplayer-volume{cursor:pointer;display:inline-block;height:100%;position:relative}.dplayer-controller .dplayer-icons .dplayer-volume:hover .dplayer-volume-bar-wrap .dplayer-volume-bar{width:45px}.dplayer-controller .dplayer-icons .dplayer-volume:hover .dplayer-volume-bar-wrap .dplayer-volume-bar .dplayer-volume-bar-inner .dplayer-thumb{transform:scale(1)}
+	.dplayer-controller .dplayer-icons .dplayer-volume.dplayer-volume-active .dplayer-volume-bar-wrap .dplayer-volume-bar{width:45px}.dplayer-controller .dplayer-icons .dplayer-volume.dplayer-volume-active .dplayer-volume-bar-wrap .dplayer-volume-bar .dplayer-volume-bar-inner .dplayer-thumb{transform:scale(1)}.dplayer-controller .dplayer-icons .dplayer-volume .dplayer-volume-bar-wrap{display:inline-block;height:100%;margin:0 10px 0 -5px;vertical-align:middle}.dplayer-controller .dplayer-icons .dplayer-volume .dplayer-volume-bar-wrap .dplayer-volume-bar{background:#fff;height:4px;position:relative;top:17px;transition:all .3s ease-in-out;width:0}.dplayer-controller .dplayer-icons .dplayer-volume .dplayer-volume-bar-wrap .dplayer-volume-bar .dplayer-volume-bar-inner{bottom:0;height:100%;left:0;position:absolute;transition:all .1s ease;will-change:width}.dplayer-controller .dplayer-icons .dplayer-volume .dplayer-volume-bar-wrap .dplayer-volume-bar .dplayer-volume-bar-inner .dplayer-thumb{border-radius:50%;cursor:pointer;height:11px;margin-right:-10px;margin-top:-4px;position:absolute;right:5px;top:0;transform:scale(0);transition:all .3s ease-in-out;width:11px}.dplayer-controller .dplayer-icons .dplayer-setting,.dplayer-controller .dplayer-icons .dplayer-subtitle-btn{display:inline-block;height:100%}.dplayer-controller .dplayer-icons .dplayer-full{display:inline-block;height:100%;position:relative}.dplayer-controller .dplayer-icons .dplayer-comment{display:inline-block;height:100%}.dplayer-mobile-icon-wrap{align-items:center;display:flex;height:50px;justify-content:space-evenly;left:50%;opacity:0;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%);transition:all .28s ease;visibility:hidden;width:100%}.dplayer-mobile-icon-wrap .dplayer-mobile-icon{-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#0000;border:none;box-sizing:border-box;cursor:pointer;filter:drop-shadow(0 0 7px rgba(0,0,0,.5));height:50px;outline:none;pointer-events:auto;width:50px}.dplayer-mobile-icon-wrap .dplayer-mobile-icon-backward,.dplayer-mobile-icon-wrap .dplayer-mobile-icon-forward{padding:12px}.dplayer-setting-box{-webkit-tap-highlight-color:rgba(0,0,0,0);background:#1c1c1ce6;border-radius:7px;bottom:64px;box-sizing:border-box;display:flex;height:calc(100% - 72px);opacity:0;overflow-x:hidden;overflow-y:hidden;position:absolute;right:20px;transition:all .25s ease;visibility:hidden;width:210px;z-index:2}
+	.dplayer-setting-box>div{overflow-x:hidden}.dplayer-setting-box>div.dplayer-setting-origin-panel{display:block}.dplayer-setting-box.dplayer-setting-box-open{opacity:1;visibility:visible}.dplayer-setting-box.dplayer-setting-box-quality{clip-path:inset(calc(100% - 30px*var(--quality-length) - 54px) 0 0 round 7px)!important}
+		.dplayer-setting-box.dplayer-setting-box-quality .dplayer-setting-origin-panel{transform:translateX(-100%)}.dplayer-setting-box.dplayer-setting-box-quality .dplayer-setting-quality-panel{display:block;transform:translateX(0)}.dplayer-setting-box.dplayer-setting-box-speed{clip-path:inset(calc(100% - 30px*var(--speed-length) - 54px) 0 0 round 7px)!important}.dplayer-setting-box.dplayer-setting-box-speed .dplayer-setting-origin-panel{transform:translateX(-100%)}.dplayer-setting-box.dplayer-setting-box-speed .dplayer-setting-speed-panel{display:block;transform:translateX(0)}.dplayer-setting-box.dplayer-setting-box-audio{clip-path:inset(calc(100% - 114px) 0 0 round 7px)!important}.dplayer-setting-box.dplayer-setting-box-audio .dplayer-setting-origin-panel{transform:translateX(-100%)}.dplayer-setting-box.dplayer-setting-box-audio .dplayer-setting-audio-panel{display:block;transform:translateX(0)}.dplayer-setting-box .dplayer-label{color:#eee;display:inline-block;font-size:13px;vertical-align:middle;white-space:nowrap}.dplayer-setting-box .dplayer-label-value{color:#e0e0e0;display:inline-block;font-size:12px;margin-left:auto;margin-right:23px;vertical-align:middle;white-space:nowrap}.dplayer-setting-box .dplayer-toggle{font-size:0;height:20px;position:absolute;right:7px;text-align:center;top:5px;vertical-align:middle;width:20px}.dplayer-setting-box .dplayer-toggle input{display:none;max-height:0;max-width:0}.dplayer-setting-box .dplayer-toggle input+label{border:1px solid #dfdfdf;border-radius:10px;box-shadow:inset 0 0 0 0 #dfdfdf;box-sizing:border-box;cursor:pointer;display:inline-block;height:20px;position:relative;right:15px;transition:.25s ease;width:32px}.dplayer-setting-box .dplayer-toggle input+label:before{border-radius:15px;content:"";display:block;height:19px;left:-.5px;position:absolute;top:-.5px;transition:.25s ease;width:19px}.dplayer-setting-box .dplayer-toggle input+label:after{background:#fff;border-radius:15px;box-shadow:0 1px 3px #0006;content:"";display:block;height:18.1px;left:0;position:absolute;top:-.1px;transition:.25s ease;width:18.1px}.dplayer-setting-box .dplayer-toggle input:checked+label{border-color:var(--theme-color)}.dplayer-setting-box .dplayer-toggle input:checked+label:before{background:var(--theme-color);width:31px}.dplayer-setting-box .dplayer-toggle input:checked+label:after{left:12px}.dplayer-setting-box .dplayer-setting-audio-panel,.dplayer-setting-box .dplayer-setting-origin-panel,.dplayer-setting-box .dplayer-setting-quality-panel,.dplayer-setting-box .dplayer-setting-speed-panel{bottom:0;box-sizing:border-box;max-height:100%;overflow-y:auto;padding:7px 0;position:absolute;scrollbar-width:thin;transition:transform .25s ease;width:100%}
+	.dplayer-setting-box .dplayer-setting-audio-panel::-webkit-scrollbar,.dplayer-setting-box .dplayer-setting-origin-panel::-webkit-scrollbar,.dplayer-setting-box .dplayer-setting-quality-panel::-webkit-scrollbar,.dplayer-setting-box .dplayer-setting-speed-panel::-webkit-scrollbar{width:6px}.dplayer-setting-box .dplayer-setting-audio-panel::-webkit-scrollbar-thumb,.dplayer-setting-box .dplayer-setting-origin-panel::-webkit-scrollbar-thumb,.dplayer-setting-box .dplayer-setting-quality-panel::-webkit-scrollbar-thumb,.dplayer-setting-box .dplayer-setting-speed-panel::-webkit-scrollbar-thumb{background:#ffffff26}.dplayer-setting-box .dplayer-setting-origin-panel{transform:translateX(0)}.dplayer-setting-box .dplayer-setting-audio-panel,.dplayer-setting-box .dplayer-setting-quality-panel,.dplayer-setting-box .dplayer-setting-speed-panel{transform:translateX(100%)}.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-header,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-header,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-header{align-items:center;border-bottom:2px solid #ffffff26;box-sizing:border-box;cursor:pointer;display:flex;height:33px;margin-bottom:7px;padding-bottom:5px;padding-left:5px}.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-audio-item,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-quality-item,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-speed-item,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-audio-item,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-quality-item,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-speed-item,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-audio-item,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-quality-item,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-speed-item{padding:5px}
+		.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-audio-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-quality-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-speed-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-audio-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-quality-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-speed-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-audio-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-quality-item .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-speed-item .dplayer-toggle{visibility:hidden}.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-audio-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-audio-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-audio-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-quality-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-quality-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-quality-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-speed-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-speed-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-setting-speed-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-audio-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-audio-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-audio-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-quality-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-quality-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-quality-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-speed-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-speed-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-setting-speed-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-audio-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-audio-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-audio-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-quality-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-quality-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-quality-item.dplayer-setting-speed-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-speed-item.dplayer-setting-audio-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-speed-item.dplayer-setting-quality-current .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-setting-speed-item.dplayer-setting-speed-current .dplayer-toggle{visibility:visible}.dplayer-setting-box .dplayer-setting-audio-panel .dplayer-toggle,.dplayer-setting-box .dplayer-setting-quality-panel .dplayer-toggle,.dplayer-setting-box .dplayer-setting-speed-panel .dplayer-toggle{display:inline-block;margin-right:6px;position:static;width:22px}
+	.dplayer-setting-box .dplayer-setting-audio-item,.dplayer-setting-box .dplayer-setting-item,.dplayer-setting-box .dplayer-setting-quality-item,.dplayer-setting-box .dplayer-setting-speed-item{align-items:center;box-sizing:border-box;cursor:pointer;display:flex;height:30px;padding:5px 10px;position:relative}
+	.dplayer-setting-box .dplayer-setting-audio-item:hover,.dplayer-setting-box .dplayer-setting-item:hover,.dplayer-setting-box .dplayer-setting-quality-item:hover,.dplayer-setting-box .dplayer-setting-speed-item:hover{background-color:#ffffff1a}
+	.dplayer-setting-box .dplayer-setting-danmaku{padding:5px 0}.dplayer-setting-box .dplayer-setting-danmaku .dplayer-label{display:inline;padding:0 10px}
+	.dplayer-setting-box .dplayer-setting-danmaku .dplayer-label-value{font-size:12.5px;margin-right:18px}.dplayer-setting-box .dplayer-setting-danmaku:hover .dplayer-label,.dplayer-setting-box .dplayer-setting-danmaku:hover .dplayer-label-value{display:none}
+		.dplayer-setting-box .dplayer-setting-danmaku:hover .dplayer-danmaku-bar-wrap{display:inline-block}.dplayer-setting-box .dplayer-setting-danmaku.dplayer-setting-danmaku-active .dplayer-label,.dplayer-setting-box .dplayer-setting-danmaku.dplayer-setting-danmaku-active .dplayer-label-value{display:none}.dplayer-setting-box .dplayer-setting-danmaku.dplayer-setting-danmaku-active .dplayer-danmaku-bar-wrap{display:inline-block}.dplayer-setting-box .dplayer-setting-danmaku .dplayer-danmaku-bar-wrap{box-sizing:border-box;display:none;height:100%;padding:0 10px;vertical-align:middle;width:100%}.dplayer-setting-box .dplayer-setting-danmaku .dplayer-danmaku-bar-wrap .dplayer-danmaku-bar{background:#fff;height:3px;position:relative;top:8.5px;transition:all .3s ease-in-out;width:100%}.dplayer-setting-box .dplayer-setting-danmaku .dplayer-danmaku-bar-wrap .dplayer-danmaku-bar .dplayer-danmaku-bar-inner{bottom:0;height:100%;left:0;position:absolute;transition:all .05s ease;will-change:width}.dplayer-setting-box .dplayer-setting-danmaku .dplayer-danmaku-bar-wrap .dplayer-danmaku-bar .dplayer-danmaku-bar-inner .dplayer-thumb{border-radius:50%;cursor:pointer;height:11px;margin-right:-10px;margin-top:-4px;position:absolute;right:5px;top:0;transition:all .3s ease-in-out;width:11px}.dplayer-comment-setting-box{-webkit-tap-highlight-color:rgba(0,0,0,0);background:#1c1c1ce6;border-radius:7px;bottom:64px;box-sizing:border-box;clip-path:inset(0 0 0 round 7px);font-size:14px;left:20px;max-height:calc(100% - 72px);opacity:0;overflow-y:auto;padding:10px 10px 16px;position:absolute;scrollbar-width:thin;transition:all .25s ease;visibility:hidden;width:255px;z-index:2}.dplayer-comment-setting-box::-webkit-scrollbar{width:6px}.dplayer-comment-setting-box::-webkit-scrollbar-thumb{background:#ffffff26}.dplayer-comment-setting-box.dplayer-comment-setting-open{opacity:1;visibility:visible}.dplayer-comment-setting-box input[type=radio]{display:none}.dplayer-comment-setting-box label{cursor:pointer}.dplayer-comment-setting-box .dplayer-comment-setting-title{color:#fff;font-size:13px;line-height:30px}.dplayer-comment-setting-box .dplayer-comment-setting-size,.dplayer-comment-setting-box .dplayer-comment-setting-type{font-size:0}.dplayer-comment-setting-box .dplayer-comment-setting-size.dplayer-comment-setting-size,.dplayer-comment-setting-box .dplayer-comment-setting-type.dplayer-comment-setting-size{margin-top:8px}.dplayer-comment-setting-box .dplayer-comment-setting-size .dplayer-comment-setting-title,.dplayer-comment-setting-box .dplayer-comment-setting-type .dplayer-comment-setting-title{margin-bottom:6px}.dplayer-comment-setting-box .dplayer-comment-setting-size label:nth-child(2) span,.dplayer-comment-setting-box .dplayer-comment-setting-type label:nth-child(2) span{border-radius:4px 0 0 4px}
+	.dplayer-comment-setting-box .dplayer-comment-setting-size label:nth-child(4) span,.dplayer-comment-setting-box .dplayer-comment-setting-type label:nth-child(4) span{border-radius:0 4px 4px 0}.dplayer-comment-setting-box .dplayer-comment-setting-size span,.dplayer-comment-setting-box .dplayer-comment-setting-type span{border:1px solid #fff;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-size:12px;line-height:16px;margin-right:-1px;padding:4px 6px;text-align:center;width:33.6%}.dplayer-comment-setting-box .dplayer-comment-setting-size input:checked+span,.dplayer-comment-setting-box .dplayer-comment-setting-type input:checked+span{background:#e4e4e6;color:#1c1c1c}.dplayer-comment-setting-box .dplayer-comment-setting-color{font-size:0}.dplayer-comment-setting-box .dplayer-comment-setting-color .dplayer-comment-setting-color-list{display:flex;justify-content:space-between;padding:4px 0}.dplayer-comment-setting-box .dplayer-comment-setting-color .dplayer-comment-setting-color-list label{display:inline-block;font-size:0;padding:6px 0}.dplayer-comment-setting-box .dplayer-comment-setting-color .dplayer-comment-setting-color-list span{border-radius:50%;box-sizing:border-box;cursor:pointer;display:inline-block;height:22px;width:22px}.dplayer-comment-setting-box .dplayer-comment-setting-color .dplayer-comment-setting-color-list span:hover{animation:my-face 5s ease-in-out infinite}.dplayer-danmaku{aspect-ratio:16/9;bottom:0;color:#fff;font-family:inherit;font-size:29px;left:0;margin:auto;max-height:100%;max-width:100%;overflow:hidden;position:absolute;right:0;top:0}.dplayer-danmaku .dplayer-danmaku-item{cursor:default;display:inline-block;font-size:var(--dplayer-danmaku-font-size);font-weight:700;opacity:var(--dplayer-danmaku-opacity);pointer-events:none;text-shadow:1.2px 1.2px 4px #000000e6;user-select:none;-webkit-user-select:none;white-space:nowrap}
+		.dplayer-danmaku .dplayer-danmaku-item--demo{position:absolute;visibility:hidden}.dplayer-danmaku .dplayer-danmaku-item span{box-decoration-break:clone;-webkit-box-decoration-break:clone}.dplayer-danmaku .dplayer-danmaku-item.dplayer-danmaku-size-big{font-size:calc(var(--dplayer-danmaku-font-size)*1.25)}.dplayer-danmaku .dplayer-danmaku-item.dplayer-danmaku-size-small{font-size:calc(var(--dplayer-danmaku-font-size)*.8)}.dplayer-danmaku .dplayer-danmaku-right{position:absolute;right:0;transform:translateX(100%)}.dplayer-danmaku .dplayer-danmaku-right.dplayer-danmaku-move{animation-name:danmaku;animation-play-state:paused;animation-timing-function:linear}@keyframes danmaku{0%{transform:translateX(100%)}}.dplayer-danmaku .dplayer-danmaku-bottom,.dplayer-danmaku .dplayer-danmaku-top{left:50%;position:absolute;transform:translateX(-50%);visibility:hidden}.dplayer-danmaku .dplayer-danmaku-bottom.dplayer-danmaku-move,.dplayer-danmaku .dplayer-danmaku-top.dplayer-danmaku-move{animation-name:danmaku-center;animation-play-state:paused;animation-timing-function:linear}@keyframes danmaku-center{0%{visibility:visible}to{visibility:visible}}.dplayer-logo{left:20px;max-height:50px;max-width:50px;pointer-events:none;position:absolute;top:20px}.dplayer-logo img{background:none;max-height:100%;max-width:100%}.dplayer-menu{background:#1c1c1cd9;border-radius:2px;display:none;overflow:hidden;padding:5px 0;position:absolute;width:170px;z-index:3}.dplayer-menu.dplayer-menu-show{display:block}.dplayer-menu .dplayer-menu-item{box-sizing:border-box;cursor:pointer;height:30px}.dplayer-menu .dplayer-menu-item:hover{background-color:#ffffff1a}.dplayer-menu .dplayer-menu-item a{box-sizing:border-box;color:#eee;display:inline-block;font-size:13px;line-height:30px;overflow:hidden;padding:0 10px;text-overflow:ellipsis;vertical-align:middle;white-space:nowrap;width:100%}.dplayer-menu .dplayer-menu-item a:hover{text-decoration:none}.dplayer-notice{background:#1c1c1ce6;border-radius:4px;bottom:68px;color:#fff;font-size:14px;left:20px;line-height:1.6;margin-right:20px;opacity:0;overflow:hidden;padding:12px 18px;pointer-events:none;position:absolute;transition:all .3s ease-in-out,color 0s}@media(max-width:500px){.dplayer-notice{bottom:auto!important;top:10px}}.dplayer-subtitle{bottom:40px;color:#fff;font-size:20px;left:5%;position:absolute;text-align:center;text-shadow:.5px .5px .5px #00000080;width:90%}.dplayer-subtitle.dplayer-subtitle-hide{display:none}.dplayer-mask{bottom:0;display:none;left:0;position:absolute;right:0;top:0;z-index:1}.dplayer-mask.dplayer-mask-show{display:block}.dplayer-video-wrap{align-items:center;background:#000;display:flex;font-size:0;height:100%;justify-content:center;position:relative;width:100%}.dplayer-video-wrap .dplayer-video-wrap-aspect{aspect-ratio:16/9;max-height:100%;max-width:100%;overflow:hidden;position:relative}
+	.dplayer-video-wrap .dplayer-video-wrap-aspect .dplayer-video{display:none;max-height:100%;max-width:100%;width:99999px}.dplayer-video-wrap .dplayer-video-wrap-aspect .dplayer-video-current{display:block}.dplayer-video-wrap .dplayer-video-wrap-aspect .dplayer-video-prepare{display:none}.dplayer-info-panel{background:#1c1c1ccc;border-radius:2px;color:#fff;font-size:12px;left:10px;padding:10px;position:absolute;top:10px;width:450px}.dplayer-info-panel-hide{display:none}.dplayer-info-panel .dplayer-info-panel-close{cursor:pointer;position:absolute;right:10px;top:10px}.dplayer-info-panel .dplayer-info-panel-item>span{display:inline-block;line-height:15px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;white-space:nowrap}.dplayer-info-panel .dplayer-info-panel-item-title{margin-right:10px;text-align:right;width:100px}.dplayer-info-panel .dplayer-info-panel-item-data{width:320px}
+ </style>
+	<style type="text/css" id="vuetify-theme-stylesheet">:root {
+	--v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 78,205,196;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 78,205,196;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 255,82,82;
+      --v-theme-error-overlay-multiplier: 1;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-accent: 78,205,196;
+      --v-theme-accent-overlay-multiplier: 1;
+      --v-theme-success-lighten-5: 220,255,214;
+      --v-theme-success-lighten-5-overlay-multiplier: 1;
+      --v-theme-success-lighten-4: 190,255,186;
+      --v-theme-success-lighten-4-overlay-multiplier: 1;
+      --v-theme-success-lighten-3: 162,255,158;
+      --v-theme-success-lighten-3-overlay-multiplier: 1;
+      --v-theme-success-lighten-2: 133,231,131;
+      --v-theme-success-lighten-2-overlay-multiplier: 1;
+      --v-theme-success-lighten-1: 105,203,105;
+      --v-theme-success-lighten-1-overlay-multiplier: 1;
+      --v-theme-success-darken-1: 45,148,55;
+      --v-theme-success-darken-1-overlay-multiplier: 1;
+      --v-theme-success-darken-2: 0,121,30;
+      --v-theme-success-darken-2-overlay-multiplier: 2;
+      --v-theme-success-darken-3: 0,96,0;
+      --v-theme-success-darken-3-overlay-multiplier: 2;
+      --v-theme-success-darken-4: 0,71,0;
+      --v-theme-success-darken-4-overlay-multiplier: 2;
+      --v-theme-warning-lighten-5: 255,255,158;
+      --v-theme-warning-lighten-5-overlay-multiplier: 1;
+      --v-theme-warning-lighten-4: 255,251,130;
+      --v-theme-warning-lighten-4-overlay-multiplier: 1;
+      --v-theme-warning-lighten-3: 255,223,103;
+      --v-theme-warning-lighten-3-overlay-multiplier: 1;
+      --v-theme-warning-lighten-2: 255,194,75;
+      --v-theme-warning-lighten-2-overlay-multiplier: 1;
+      --v-theme-warning-lighten-1: 255,167,45;
+      --v-theme-warning-lighten-1-overlay-multiplier: 1;
+      --v-theme-warning-darken-1: 219,114,0;
+      --v-theme-warning-darken-1-overlay-multiplier: 1;
+      --v-theme-warning-darken-2: 187,89,0;
+      --v-theme-warning-darken-2-overlay-multiplier: 2;
+      --v-theme-warning-darken-3: 157,64,0;
+      --v-theme-warning-darken-3-overlay-multiplier: 2;
+      --v-theme-warning-darken-4: 128,39,0;
+      --v-theme-warning-darken-4-overlay-multiplier: 2;
+      --v-theme-error-lighten-5: 255,228,213;
+      --v-theme-error-lighten-5-overlay-multiplier: 1;
+      --v-theme-error-lighten-4: 255,198,185;
+      --v-theme-error-lighten-4-overlay-multiplier: 1;
+      --v-theme-error-lighten-3: 255,169,158;
+      --v-theme-error-lighten-3-overlay-multiplier: 1;
+      --v-theme-error-lighten-2: 255,140,132;
+      --v-theme-error-lighten-2-overlay-multiplier: 1;
+      --v-theme-error-lighten-1: 255,111,106;
+      --v-theme-error-lighten-1-overlay-multiplier: 1;
+      --v-theme-error-darken-1: 223,50,59;
+      --v-theme-error-darken-1-overlay-multiplier: 1;
+      --v-theme-error-darken-2: 191,0,37;
+      --v-theme-error-darken-2-overlay-multiplier: 2;
+      --v-theme-error-darken-3: 159,0,16;
+      --v-theme-error-darken-3-overlay-multiplier: 2;
+      --v-theme-error-darken-4: 128,0,0;
+      --v-theme-error-darken-4-overlay-multiplier: 2;
+      --v-theme-info-lighten-5: 212,255,255;
+      --v-theme-info-lighten-5-overlay-multiplier: 1;
+      --v-theme-info-lighten-4: 181,255,255;
+      --v-theme-info-lighten-4-overlay-multiplier: 1;
+      --v-theme-info-lighten-3: 149,232,255;
+      --v-theme-info-lighten-3-overlay-multiplier: 1;
+      --v-theme-info-lighten-2: 117,204,255;
+      --v-theme-info-lighten-2-overlay-multiplier: 1;
+      --v-theme-info-lighten-1: 81,176,255;
+      --v-theme-info-lighten-1-overlay-multiplier: 1;
+      --v-theme-info-darken-1: 0,124,214;
+      --v-theme-info-darken-1-overlay-multiplier: 1;
+      --v-theme-info-darken-2: 0,100,186;
+      --v-theme-info-darken-2-overlay-multiplier: 2;
+      --v-theme-info-darken-3: 0,77,159;
+      --v-theme-info-darken-3-overlay-multiplier: 2;
+      --v-theme-info-darken-4: 0,55,132;
+      --v-theme-info-darken-4-overlay-multiplier: 2;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 0,0,0;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-accent: 0,0,0;
+      --v-theme-on-success-lighten-5: 0,0,0;
+      --v-theme-on-success-lighten-4: 0,0,0;
+      --v-theme-on-success-lighten-3: 0,0,0;
+      --v-theme-on-success-lighten-2: 0,0,0;
+      --v-theme-on-success-lighten-1: 0,0,0;
+      --v-theme-on-success-darken-1: 255,255,255;
+      --v-theme-on-success-darken-2: 255,255,255;
+      --v-theme-on-success-darken-3: 255,255,255;
+      --v-theme-on-success-darken-4: 255,255,255;
+      --v-theme-on-warning-lighten-5: 0,0,0;
+      --v-theme-on-warning-lighten-4: 0,0,0;
+      --v-theme-on-warning-lighten-3: 0,0,0;
+      --v-theme-on-warning-lighten-2: 0,0,0;
+      --v-theme-on-warning-lighten-1: 0,0,0;
+      --v-theme-on-warning-darken-1: 255,255,255;
+      --v-theme-on-warning-darken-2: 255,255,255;
+      --v-theme-on-warning-darken-3: 255,255,255;
+      --v-theme-on-warning-darken-4: 255,255,255;
+      --v-theme-on-error-lighten-5: 0,0,0;
+      --v-theme-on-error-lighten-4: 0,0,0;
+      --v-theme-on-error-lighten-3: 0,0,0;
+      --v-theme-on-error-lighten-2: 0,0,0;
+      --v-theme-on-error-lighten-1: 255,255,255;
+      --v-theme-on-error-darken-1: 255,255,255;
+      --v-theme-on-error-darken-2: 255,255,255;
+      --v-theme-on-error-darken-3: 255,255,255;
+      --v-theme-on-error-darken-4: 255,255,255;
+      --v-theme-on-info-lighten-5: 0,0,0;
+      --v-theme-on-info-lighten-4: 0,0,0;
+      --v-theme-on-info-lighten-3: 0,0,0;
+      --v-theme-on-info-lighten-2: 0,0,0;
+      --v-theme-on-info-lighten-1: 255,255,255;
+      --v-theme-on-info-darken-1: 255,255,255;
+      --v-theme-on-info-darken-2: 255,255,255;
+      --v-theme-on-info-darken-3: 255,255,255;
+      --v-theme-on-info-darken-4: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.08;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.24;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 78,205,196;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 78,205,196;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 255,82,82;
+      --v-theme-error-overlay-multiplier: 1;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-accent: 78,205,196;
+      --v-theme-accent-overlay-multiplier: 1;
+      --v-theme-success-lighten-5: 220,255,214;
+      --v-theme-success-lighten-5-overlay-multiplier: 1;
+      --v-theme-success-lighten-4: 190,255,186;
+      --v-theme-success-lighten-4-overlay-multiplier: 1;
+      --v-theme-success-lighten-3: 162,255,158;
+      --v-theme-success-lighten-3-overlay-multiplier: 1;
+      --v-theme-success-lighten-2: 133,231,131;
+      --v-theme-success-lighten-2-overlay-multiplier: 1;
+      --v-theme-success-lighten-1: 105,203,105;
+      --v-theme-success-lighten-1-overlay-multiplier: 1;
+      --v-theme-success-darken-1: 45,148,55;
+      --v-theme-success-darken-1-overlay-multiplier: 1;
+      --v-theme-success-darken-2: 0,121,30;
+      --v-theme-success-darken-2-overlay-multiplier: 2;
+      --v-theme-success-darken-3: 0,96,0;
+      --v-theme-success-darken-3-overlay-multiplier: 2;
+      --v-theme-success-darken-4: 0,71,0;
+      --v-theme-success-darken-4-overlay-multiplier: 2;
+      --v-theme-warning-lighten-5: 255,255,158;
+      --v-theme-warning-lighten-5-overlay-multiplier: 1;
+      --v-theme-warning-lighten-4: 255,251,130;
+      --v-theme-warning-lighten-4-overlay-multiplier: 1;
+      --v-theme-warning-lighten-3: 255,223,103;
+      --v-theme-warning-lighten-3-overlay-multiplier: 1;
+      --v-theme-warning-lighten-2: 255,194,75;
+      --v-theme-warning-lighten-2-overlay-multiplier: 1;
+      --v-theme-warning-lighten-1: 255,167,45;
+      --v-theme-warning-lighten-1-overlay-multiplier: 1;
+      --v-theme-warning-darken-1: 219,114,0;
+      --v-theme-warning-darken-1-overlay-multiplier: 1;
+      --v-theme-warning-darken-2: 187,89,0;
+      --v-theme-warning-darken-2-overlay-multiplier: 2;
+      --v-theme-warning-darken-3: 157,64,0;
+      --v-theme-warning-darken-3-overlay-multiplier: 2;
+      --v-theme-warning-darken-4: 128,39,0;
+      --v-theme-warning-darken-4-overlay-multiplier: 2;
+      --v-theme-error-lighten-5: 255,228,213;
+      --v-theme-error-lighten-5-overlay-multiplier: 1;
+      --v-theme-error-lighten-4: 255,198,185;
+      --v-theme-error-lighten-4-overlay-multiplier: 1;
+      --v-theme-error-lighten-3: 255,169,158;
+      --v-theme-error-lighten-3-overlay-multiplier: 1;
+      --v-theme-error-lighten-2: 255,140,132;
+      --v-theme-error-lighten-2-overlay-multiplier: 1;
+      --v-theme-error-lighten-1: 255,111,106;
+      --v-theme-error-lighten-1-overlay-multiplier: 1;
+      --v-theme-error-darken-1: 223,50,59;
+      --v-theme-error-darken-1-overlay-multiplier: 1;
+      --v-theme-error-darken-2: 191,0,37;
+      --v-theme-error-darken-2-overlay-multiplier: 2;
+      --v-theme-error-darken-3: 159,0,16;
+      --v-theme-error-darken-3-overlay-multiplier: 2;
+      --v-theme-error-darken-4: 128,0,0;
+      --v-theme-error-darken-4-overlay-multiplier: 2;
+      --v-theme-info-lighten-5: 212,255,255;
+      --v-theme-info-lighten-5-overlay-multiplier: 1;
+      --v-theme-info-lighten-4: 181,255,255;
+      --v-theme-info-lighten-4-overlay-multiplier: 1;
+      --v-theme-info-lighten-3: 149,232,255;
+      --v-theme-info-lighten-3-overlay-multiplier: 1;
+      --v-theme-info-lighten-2: 117,204,255;
+      --v-theme-info-lighten-2-overlay-multiplier: 1;
+      --v-theme-info-lighten-1: 81,176,255;
+      --v-theme-info-lighten-1-overlay-multiplier: 1;
+      --v-theme-info-darken-1: 0,124,214;
+      --v-theme-info-darken-1-overlay-multiplier: 1;
+      --v-theme-info-darken-2: 0,100,186;
+      --v-theme-info-darken-2-overlay-multiplier: 2;
+      --v-theme-info-darken-3: 0,77,159;
+      --v-theme-info-darken-3-overlay-multiplier: 2;
+      --v-theme-info-darken-4: 0,55,132;
+      --v-theme-info-darken-4-overlay-multiplier: 2;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 0,0,0;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-accent: 0,0,0;
+      --v-theme-on-success-lighten-5: 0,0,0;
+      --v-theme-on-success-lighten-4: 0,0,0;
+      --v-theme-on-success-lighten-3: 0,0,0;
+      --v-theme-on-success-lighten-2: 0,0,0;
+      --v-theme-on-success-lighten-1: 0,0,0;
+      --v-theme-on-success-darken-1: 255,255,255;
+      --v-theme-on-success-darken-2: 255,255,255;
+      --v-theme-on-success-darken-3: 255,255,255;
+      --v-theme-on-success-darken-4: 255,255,255;
+      --v-theme-on-warning-lighten-5: 0,0,0;
+      --v-theme-on-warning-lighten-4: 0,0,0;
+      --v-theme-on-warning-lighten-3: 0,0,0;
+      --v-theme-on-warning-lighten-2: 0,0,0;
+      --v-theme-on-warning-lighten-1: 0,0,0;
+      --v-theme-on-warning-darken-1: 255,255,255;
+      --v-theme-on-warning-darken-2: 255,255,255;
+      --v-theme-on-warning-darken-3: 255,255,255;
+      --v-theme-on-warning-darken-4: 255,255,255;
+      --v-theme-on-error-lighten-5: 0,0,0;
+      --v-theme-on-error-lighten-4: 0,0,0;
+      --v-theme-on-error-lighten-3: 0,0,0;
+      --v-theme-on-error-lighten-2: 0,0,0;
+      --v-theme-on-error-lighten-1: 255,255,255;
+      --v-theme-on-error-darken-1: 255,255,255;
+      --v-theme-on-error-darken-2: 255,255,255;
+      --v-theme-on-error-darken-3: 255,255,255;
+      --v-theme-on-error-darken-4: 255,255,255;
+      --v-theme-on-info-lighten-5: 0,0,0;
+      --v-theme-on-info-lighten-4: 0,0,0;
+      --v-theme-on-info-lighten-3: 0,0,0;
+      --v-theme-on-info-lighten-2: 0,0,0;
+      --v-theme-on-info-lighten-1: 255,255,255;
+      --v-theme-on-info-darken-1: 255,255,255;
+      --v-theme-on-info-darken-2: 255,255,255;
+      --v-theme-on-info-darken-3: 255,255,255;
+      --v-theme-on-info-darken-4: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.08;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.24;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204,191,214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66,66,66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 163,163,163;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 33,150,243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39,124,193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84,182,178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72,169,166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .bg-accent {
+      --v-theme-overlay-multiplier: var(--v-theme-accent-overlay-multiplier);
+      background-color: rgb(var(--v-theme-accent)) !important;
+      color: rgb(var(--v-theme-on-accent)) !important;
+    }
+    .bg-success-lighten-5 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-lighten-5-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-lighten-5)) !important;
+      color: rgb(var(--v-theme-on-success-lighten-5)) !important;
+    }
+    .bg-success-lighten-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-lighten-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-lighten-4)) !important;
+      color: rgb(var(--v-theme-on-success-lighten-4)) !important;
+    }
+    .bg-success-lighten-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-lighten-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-lighten-3)) !important;
+      color: rgb(var(--v-theme-on-success-lighten-3)) !important;
+    }
+    .bg-success-lighten-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-lighten-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-lighten-2)) !important;
+      color: rgb(var(--v-theme-on-success-lighten-2)) !important;
+    }
+    .bg-success-lighten-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-lighten-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-lighten-1)) !important;
+      color: rgb(var(--v-theme-on-success-lighten-1)) !important;
+    }
+    .bg-success-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-darken-1)) !important;
+      color: rgb(var(--v-theme-on-success-darken-1)) !important;
+    }
+    .bg-success-darken-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-darken-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-darken-2)) !important;
+      color: rgb(var(--v-theme-on-success-darken-2)) !important;
+    }
+    .bg-success-darken-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-darken-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-darken-3)) !important;
+      color: rgb(var(--v-theme-on-success-darken-3)) !important;
+    }
+    .bg-success-darken-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-success-darken-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success-darken-4)) !important;
+      color: rgb(var(--v-theme-on-success-darken-4)) !important;
+    }
+    .bg-warning-lighten-5 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-lighten-5-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-lighten-5)) !important;
+      color: rgb(var(--v-theme-on-warning-lighten-5)) !important;
+    }
+    .bg-warning-lighten-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-lighten-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-lighten-4)) !important;
+      color: rgb(var(--v-theme-on-warning-lighten-4)) !important;
+    }
+    .bg-warning-lighten-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-lighten-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-lighten-3)) !important;
+      color: rgb(var(--v-theme-on-warning-lighten-3)) !important;
+    }
+    .bg-warning-lighten-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-lighten-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-lighten-2)) !important;
+      color: rgb(var(--v-theme-on-warning-lighten-2)) !important;
+    }
+    .bg-warning-lighten-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-lighten-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-lighten-1)) !important;
+      color: rgb(var(--v-theme-on-warning-lighten-1)) !important;
+    }
+    .bg-warning-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-darken-1)) !important;
+      color: rgb(var(--v-theme-on-warning-darken-1)) !important;
+    }
+    .bg-warning-darken-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-darken-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-darken-2)) !important;
+      color: rgb(var(--v-theme-on-warning-darken-2)) !important;
+    }
+    .bg-warning-darken-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-darken-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-darken-3)) !important;
+      color: rgb(var(--v-theme-on-warning-darken-3)) !important;
+    }
+    .bg-warning-darken-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-darken-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning-darken-4)) !important;
+      color: rgb(var(--v-theme-on-warning-darken-4)) !important;
+    }
+    .bg-error-lighten-5 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-lighten-5-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-lighten-5)) !important;
+      color: rgb(var(--v-theme-on-error-lighten-5)) !important;
+    }
+    .bg-error-lighten-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-lighten-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-lighten-4)) !important;
+      color: rgb(var(--v-theme-on-error-lighten-4)) !important;
+    }
+    .bg-error-lighten-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-lighten-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-lighten-3)) !important;
+      color: rgb(var(--v-theme-on-error-lighten-3)) !important;
+    }
+    .bg-error-lighten-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-lighten-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-lighten-2)) !important;
+      color: rgb(var(--v-theme-on-error-lighten-2)) !important;
+    }
+    .bg-error-lighten-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-lighten-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-lighten-1)) !important;
+      color: rgb(var(--v-theme-on-error-lighten-1)) !important;
+    }
+    .bg-error-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-darken-1)) !important;
+      color: rgb(var(--v-theme-on-error-darken-1)) !important;
+    }
+    .bg-error-darken-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-darken-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-darken-2)) !important;
+      color: rgb(var(--v-theme-on-error-darken-2)) !important;
+    }
+    .bg-error-darken-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-darken-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-darken-3)) !important;
+      color: rgb(var(--v-theme-on-error-darken-3)) !important;
+    }
+    .bg-error-darken-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-error-darken-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error-darken-4)) !important;
+      color: rgb(var(--v-theme-on-error-darken-4)) !important;
+    }
+    .bg-info-lighten-5 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-lighten-5-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-lighten-5)) !important;
+      color: rgb(var(--v-theme-on-info-lighten-5)) !important;
+    }
+    .bg-info-lighten-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-lighten-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-lighten-4)) !important;
+      color: rgb(var(--v-theme-on-info-lighten-4)) !important;
+    }
+    .bg-info-lighten-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-lighten-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-lighten-3)) !important;
+      color: rgb(var(--v-theme-on-info-lighten-3)) !important;
+    }
+    .bg-info-lighten-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-lighten-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-lighten-2)) !important;
+      color: rgb(var(--v-theme-on-info-lighten-2)) !important;
+    }
+    .bg-info-lighten-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-lighten-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-lighten-1)) !important;
+      color: rgb(var(--v-theme-on-info-lighten-1)) !important;
+    }
+    .bg-info-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-darken-1)) !important;
+      color: rgb(var(--v-theme-on-info-darken-1)) !important;
+    }
+    .bg-info-darken-2 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-darken-2-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-darken-2)) !important;
+      color: rgb(var(--v-theme-on-info-darken-2)) !important;
+    }
+    .bg-info-darken-3 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-darken-3-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-darken-3)) !important;
+      color: rgb(var(--v-theme-on-info-darken-3)) !important;
+    }
+    .bg-info-darken-4 {
+      --v-theme-overlay-multiplier: var(--v-theme-info-darken-4-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info-darken-4)) !important;
+      color: rgb(var(--v-theme-on-info-darken-4)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .text-accent {
+      color: rgb(var(--v-theme-accent)) !important;
+    }
+    .border-accent {
+      --v-border-color: var(--v-theme-accent);
+    }
+    .text-success-lighten-5 {
+      color: rgb(var(--v-theme-success-lighten-5)) !important;
+    }
+    .border-success-lighten-5 {
+      --v-border-color: var(--v-theme-success-lighten-5);
+    }
+    .text-success-lighten-4 {
+      color: rgb(var(--v-theme-success-lighten-4)) !important;
+    }
+    .border-success-lighten-4 {
+      --v-border-color: var(--v-theme-success-lighten-4);
+    }
+    .text-success-lighten-3 {
+      color: rgb(var(--v-theme-success-lighten-3)) !important;
+    }
+    .border-success-lighten-3 {
+      --v-border-color: var(--v-theme-success-lighten-3);
+    }
+    .text-success-lighten-2 {
+      color: rgb(var(--v-theme-success-lighten-2)) !important;
+    }
+    .border-success-lighten-2 {
+      --v-border-color: var(--v-theme-success-lighten-2);
+    }
+    .text-success-lighten-1 {
+      color: rgb(var(--v-theme-success-lighten-1)) !important;
+    }
+    .border-success-lighten-1 {
+      --v-border-color: var(--v-theme-success-lighten-1);
+    }
+    .text-success-darken-1 {
+      color: rgb(var(--v-theme-success-darken-1)) !important;
+    }
+    .border-success-darken-1 {
+      --v-border-color: var(--v-theme-success-darken-1);
+    }
+    .text-success-darken-2 {
+      color: rgb(var(--v-theme-success-darken-2)) !important;
+    }
+    .border-success-darken-2 {
+      --v-border-color: var(--v-theme-success-darken-2);
+    }
+    .text-success-darken-3 {
+      color: rgb(var(--v-theme-success-darken-3)) !important;
+    }
+    .border-success-darken-3 {
+      --v-border-color: var(--v-theme-success-darken-3);
+    }
+    .text-success-darken-4 {
+      color: rgb(var(--v-theme-success-darken-4)) !important;
+    }
+    .border-success-darken-4 {
+      --v-border-color: var(--v-theme-success-darken-4);
+    }
+    .text-warning-lighten-5 {
+      color: rgb(var(--v-theme-warning-lighten-5)) !important;
+    }
+    .border-warning-lighten-5 {
+      --v-border-color: var(--v-theme-warning-lighten-5);
+    }
+    .text-warning-lighten-4 {
+      color: rgb(var(--v-theme-warning-lighten-4)) !important;
+    }
+    .border-warning-lighten-4 {
+      --v-border-color: var(--v-theme-warning-lighten-4);
+    }
+    .text-warning-lighten-3 {
+      color: rgb(var(--v-theme-warning-lighten-3)) !important;
+    }
+    .border-warning-lighten-3 {
+      --v-border-color: var(--v-theme-warning-lighten-3);
+    }
+    .text-warning-lighten-2 {
+      color: rgb(var(--v-theme-warning-lighten-2)) !important;
+    }
+    .border-warning-lighten-2 {
+      --v-border-color: var(--v-theme-warning-lighten-2);
+    }
+    .text-warning-lighten-1 {
+      color: rgb(var(--v-theme-warning-lighten-1)) !important;
+    }
+    .border-warning-lighten-1 {
+      --v-border-color: var(--v-theme-warning-lighten-1);
+    }
+    .text-warning-darken-1 {
+      color: rgb(var(--v-theme-warning-darken-1)) !important;
+    }
+    .border-warning-darken-1 {
+      --v-border-color: var(--v-theme-warning-darken-1);
+    }
+    .text-warning-darken-2 {
+      color: rgb(var(--v-theme-warning-darken-2)) !important;
+    }
+    .border-warning-darken-2 {
+      --v-border-color: var(--v-theme-warning-darken-2);
+    }
+    .text-warning-darken-3 {
+      color: rgb(var(--v-theme-warning-darken-3)) !important;
+    }
+    .border-warning-darken-3 {
+      --v-border-color: var(--v-theme-warning-darken-3);
+    }
+    .text-warning-darken-4 {
+      color: rgb(var(--v-theme-warning-darken-4)) !important;
+    }
+    .border-warning-darken-4 {
+      --v-border-color: var(--v-theme-warning-darken-4);
+    }
+    .text-error-lighten-5 {
+      color: rgb(var(--v-theme-error-lighten-5)) !important;
+    }
+    .border-error-lighten-5 {
+      --v-border-color: var(--v-theme-error-lighten-5);
+    }
+    .text-error-lighten-4 {
+      color: rgb(var(--v-theme-error-lighten-4)) !important;
+    }
+    .border-error-lighten-4 {
+      --v-border-color: var(--v-theme-error-lighten-4);
+    }
+    .text-error-lighten-3 {
+      color: rgb(var(--v-theme-error-lighten-3)) !important;
+    }
+    .border-error-lighten-3 {
+      --v-border-color: var(--v-theme-error-lighten-3);
+    }
+    .text-error-lighten-2 {
+      color: rgb(var(--v-theme-error-lighten-2)) !important;
+    }
+    .border-error-lighten-2 {
+      --v-border-color: var(--v-theme-error-lighten-2);
+    }
+    .text-error-lighten-1 {
+      color: rgb(var(--v-theme-error-lighten-1)) !important;
+    }
+    .border-error-lighten-1 {
+      --v-border-color: var(--v-theme-error-lighten-1);
+    }
+    .text-error-darken-1 {
+      color: rgb(var(--v-theme-error-darken-1)) !important;
+    }
+    .border-error-darken-1 {
+      --v-border-color: var(--v-theme-error-darken-1);
+    }
+    .text-error-darken-2 {
+      color: rgb(var(--v-theme-error-darken-2)) !important;
+    }
+    .border-error-darken-2 {
+      --v-border-color: var(--v-theme-error-darken-2);
+    }
+    .text-error-darken-3 {
+      color: rgb(var(--v-theme-error-darken-3)) !important;
+    }
+    .border-error-darken-3 {
+      --v-border-color: var(--v-theme-error-darken-3);
+    }
+    .text-error-darken-4 {
+      color: rgb(var(--v-theme-error-darken-4)) !important;
+    }
+    .border-error-darken-4 {
+      --v-border-color: var(--v-theme-error-darken-4);
+    }
+    .text-info-lighten-5 {
+      color: rgb(var(--v-theme-info-lighten-5)) !important;
+    }
+    .border-info-lighten-5 {
+      --v-border-color: var(--v-theme-info-lighten-5);
+    }
+    .text-info-lighten-4 {
+      color: rgb(var(--v-theme-info-lighten-4)) !important;
+    }
+    .border-info-lighten-4 {
+      --v-border-color: var(--v-theme-info-lighten-4);
+    }
+    .text-info-lighten-3 {
+      color: rgb(var(--v-theme-info-lighten-3)) !important;
+    }
+    .border-info-lighten-3 {
+      --v-border-color: var(--v-theme-info-lighten-3);
+    }
+    .text-info-lighten-2 {
+      color: rgb(var(--v-theme-info-lighten-2)) !important;
+    }
+    .border-info-lighten-2 {
+      --v-border-color: var(--v-theme-info-lighten-2);
+    }
+    .text-info-lighten-1 {
+      color: rgb(var(--v-theme-info-lighten-1)) !important;
+    }
+    .border-info-lighten-1 {
+      --v-border-color: var(--v-theme-info-lighten-1);
+    }
+    .text-info-darken-1 {
+      color: rgb(var(--v-theme-info-darken-1)) !important;
+    }
+    .border-info-darken-1 {
+      --v-border-color: var(--v-theme-info-darken-1);
+    }
+    .text-info-darken-2 {
+      color: rgb(var(--v-theme-info-darken-2)) !important;
+    }
+    .border-info-darken-2 {
+      --v-border-color: var(--v-theme-info-darken-2);
+    }
+    .text-info-darken-3 {
+      color: rgb(var(--v-theme-info-darken-3)) !important;
+    }
+    .border-info-darken-3 {
+      --v-border-color: var(--v-theme-info-darken-3);
+    }
+    .text-info-darken-4 {
+      color: rgb(var(--v-theme-info-darken-4)) !important;
+    }
+    .border-info-darken-4 {
+      --v-border-color: var(--v-theme-info-darken-4);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .on-accent {
+      color: rgb(var(--v-theme-on-accent)) !important;
+    }
+    .on-success-lighten-5 {
+      color: rgb(var(--v-theme-on-success-lighten-5)) !important;
+    }
+    .on-success-lighten-4 {
+      color: rgb(var(--v-theme-on-success-lighten-4)) !important;
+    }
+    .on-success-lighten-3 {
+      color: rgb(var(--v-theme-on-success-lighten-3)) !important;
+    }
+    .on-success-lighten-2 {
+      color: rgb(var(--v-theme-on-success-lighten-2)) !important;
+    }
+    .on-success-lighten-1 {
+      color: rgb(var(--v-theme-on-success-lighten-1)) !important;
+    }
+    .on-success-darken-1 {
+      color: rgb(var(--v-theme-on-success-darken-1)) !important;
+    }
+    .on-success-darken-2 {
+      color: rgb(var(--v-theme-on-success-darken-2)) !important;
+    }
+    .on-success-darken-3 {
+      color: rgb(var(--v-theme-on-success-darken-3)) !important;
+    }
+    .on-success-darken-4 {
+      color: rgb(var(--v-theme-on-success-darken-4)) !important;
+    }
+    .on-warning-lighten-5 {
+      color: rgb(var(--v-theme-on-warning-lighten-5)) !important;
+    }
+    .on-warning-lighten-4 {
+      color: rgb(var(--v-theme-on-warning-lighten-4)) !important;
+    }
+    .on-warning-lighten-3 {
+      color: rgb(var(--v-theme-on-warning-lighten-3)) !important;
+    }
+    .on-warning-lighten-2 {
+      color: rgb(var(--v-theme-on-warning-lighten-2)) !important;
+    }
+    .on-warning-lighten-1 {
+      color: rgb(var(--v-theme-on-warning-lighten-1)) !important;
+    }
+    .on-warning-darken-1 {
+      color: rgb(var(--v-theme-on-warning-darken-1)) !important;
+    }
+    .on-warning-darken-2 {
+      color: rgb(var(--v-theme-on-warning-darken-2)) !important;
+    }
+    .on-warning-darken-3 {
+      color: rgb(var(--v-theme-on-warning-darken-3)) !important;
+    }
+    .on-warning-darken-4 {
+      color: rgb(var(--v-theme-on-warning-darken-4)) !important;
+    }
+    .on-error-lighten-5 {
+      color: rgb(var(--v-theme-on-error-lighten-5)) !important;
+    }
+    .on-error-lighten-4 {
+      color: rgb(var(--v-theme-on-error-lighten-4)) !important;
+    }
+    .on-error-lighten-3 {
+      color: rgb(var(--v-theme-on-error-lighten-3)) !important;
+    }
+    .on-error-lighten-2 {
+      color: rgb(var(--v-theme-on-error-lighten-2)) !important;
+    }
+    .on-error-lighten-1 {
+      color: rgb(var(--v-theme-on-error-lighten-1)) !important;
+    }
+    .on-error-darken-1 {
+      color: rgb(var(--v-theme-on-error-darken-1)) !important;
+    }
+    .on-error-darken-2 {
+      color: rgb(var(--v-theme-on-error-darken-2)) !important;
+    }
+    .on-error-darken-3 {
+      color: rgb(var(--v-theme-on-error-darken-3)) !important;
+    }
+    .on-error-darken-4 {
+      color: rgb(var(--v-theme-on-error-darken-4)) !important;
+    }
+    .on-info-lighten-5 {
+      color: rgb(var(--v-theme-on-info-lighten-5)) !important;
+    }
+    .on-info-lighten-4 {
+      color: rgb(var(--v-theme-on-info-lighten-4)) !important;
+    }
+    .on-info-lighten-3 {
+      color: rgb(var(--v-theme-on-info-lighten-3)) !important;
+    }
+    .on-info-lighten-2 {
+      color: rgb(var(--v-theme-on-info-lighten-2)) !important;
+    }
+    .on-info-lighten-1 {
+      color: rgb(var(--v-theme-on-info-lighten-1)) !important;
+    }
+    .on-info-darken-1 {
+      color: rgb(var(--v-theme-on-info-darken-1)) !important;
+    }
+    .on-info-darken-2 {
+      color: rgb(var(--v-theme-on-info-darken-2)) !important;
+    }
+    .on-info-darken-3 {
+      color: rgb(var(--v-theme-on-info-darken-3)) !important;
+    }
+    .on-info-darken-4 {
+      color: rgb(var(--v-theme-on-info-darken-4)) !important;
+    }
+</style></head>
+<body>
+	<nav id="navigation" class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+		<div class="container">
+			<a class="navbar-brand py-0" href="./">
+				<img id="logo" src="/YouTubeMP3modoki/assets/images/logo_summer.png">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+ 
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link text-dark" data-href="#" style="cursor: pointer;"><i class="fas fa-home"></i>Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" data-href="#about" style="cursor: pointer;"><i class="fas fa-info-circle"></i>About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" data-href="#usage" style="cursor: pointer;"><i class="fas fa-question-circle"></i>Usage</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" data-href="#note" style="cursor: pointer;"><i class="fas fa-sticky-note"></i>Note</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" href="https://twitter.com/YTMP3modoki" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" href="https://ytmp3modoki.fanbox.cc/" target="_blank"><i class="fas fa-ticket-alt"></i>FANBOX</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+ 
+	<div class="alert alert-info mb-0" role="alert">
+		<div class="container px-0 px-sm-2-3">
+			<div class="mb-0">
+				<!-- <b>このサイトは多忙な個人が今更サ終する訳にもいかず渋々運営しているのですが、アクセス数の割に広告収入は雀の涙で、サイト単体では維持費を賄えていません。</b><br> -->
+				Amazon でのお買い物を通じて少しでもサポートいただけると、運営存続への大きな力になります！<br>
+				<b>ぜひ <a href="https://www.amazon.co.jp/dp/B0C1YY8GSB?tag=tsukumijima-22" target="_blank">こちらの激安ミニ PC の商品リンク</a> から Amazon に入ってお買い物をしていただけると嬉しいです🙏</b> 購入額の数%が<a href="https://affiliate.amazon.co.jp/help/node/topic/GRXPHT8U84RAYDXZ" target="_blank">紹介料</a>として私の収益になります。<br>
+				<b>一応 <a href="https://www.amazon.co.jp/hz/wishlist/ls/3AZ4RI13SW2PV" target="_blank">ほしいものリスト</a> もあります。贈っていただけると大変モチベになります！</b> (<a href="https://twitter.com/YTMP3modoki/status/1695557117649076441" target="_blank">以前贈ってくださった方本当にありがとうございました！！🙏🙏</a>)<br>
+			</div>
+		</div>
+	</div>
+	<div class="alert alert-warning" role="alert">
+		<div class="container px-0 px-sm-2-3">
+			<b>2025/09/28 現在、TikTok Lite では「新規で」アプリをインストールし、10日間連続でタスク (ログボみたいなもん) をクリアすると、<u>もれなく ¥5000+α を錬金できるキャンペーンが実施されています！！！</u> <a href="https://twitter.com/YTMP3modoki/status/1719924322234691701" target="_blank"> 09/28 時点で 88 人の方が錬金を達成されています。</a></b><br>
+			詳しくは <b><a href="https://mango-garlic-eff.notion.site/TikTok-Lite-5000-5583e62d903a4b218ccba5deada26030" target="_blank">こちら</a></b> の記事に載せてますので、ぜひ試してみてください！TikTok の気まぐれでいつ終わるか分からないのでお早めに〜！ <a href="https://twitter.com/YTMP3modoki/status/1702940039515418936" target="_blank">頑張れば現金化も可能です。</a><br>
+			(ちなみに iPhone であれば、<a href="https://twitter.com/YTMP3modoki/status/1702944501655048444" target="_blank">TikTok (無印) のアカウントとアプリを iPhone から完全削除することで新規インストール扱いで参加できるらしい</a> です)<br>
+		</div>
+	</div>
+ 
+	<div class="alert alert-danger" role="alert">
+		<div class="container px-0 px-sm-2-3">
+			<b>📢 2025年4月に6年ぶりの全面リニューアルを行いました！！🎉🎊 UI もサーバーも完全に作り直し、比べ物にならないほど動作安定性が向上しています！！</b><br>
+			<b>また確実に高速にダウンロード・変換したい方向けに、<a href="https://ytmp3modoki.fanbox.cc/" target="_blank">FANBOX 支援者の方には限定記事にて「優先高速変換チケット」のシリアルコードを公開しています！</a></b><br>
+			チケットをお持ちの方は、より確実にダウンロードできる専用サーバーに接続し、混雑時でも高速にダウンロードできます。<br>
+            <div style="height: 4px"></div>
+			<b>さらに再び YouTube の動画を変換できるようになりました！🎉 「優先高速変換チケット」をお持ちの方はさらに確実 &amp; 高速に変換できます。</b><br>
+			2024/12/23 頃から YouTube の規制が大幅に強化され、他サイトも含め、通常の方法ではデータセンター IP からの動画ダウンロードが不可能になっています。<br>
+            今回の全面リニューアルに加え、詳細は割愛しますが運よく回避できるルートを発見できたことで、ようやくある程度規制をかいくぐれそうな目処がつきました。<br>
+            ただし、アクセス規制が非常に厳しくなっているため、通常サーバーでは YouTube の動画ダウンロードが確実に成功するとは限らない状況です。<br>
+            <div style="height: 4px"></div>
+			<b>引き続き、ぜひ <a href="https://ytmp3modoki.fanbox.cc/" target="_blank">FANBOX</a> にてご支援いただけますと大変幸いです…🙏🙏🙏</b> (いつもご支援くださっている皆様本当にありがとうございます！)<br>
+		</div>
+	</div>
+ 
+	<noscript>
+		<strong>We're sorry but YouTubeMP3もどき doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+	</noscript>
+	<div id="app" data-v-app="">
+		<div data-v-5d9447fb="" class="container px-0 px-sm-2-3 mt-4">
+			<div data-v-5d9447fb="" class="card">
+				<form data-v-a619d1ee="" data-v-5d9447fb="" id="form" class="card-body px-sm-5" action="/get_download_link" method="POST">
+					<p data-v-a619d1ee="" class="mt-3 mb-1 text-muted">
+						<b data-v-a619d1ee="">動画の URL :</b>
+					</p>
+					<div data-v-a619d1ee="" class="input-group mb-3">
+						<input data-v-a619d1ee="" type="url" class="form-control" placeholder="ここに動画の URL を入力してください" required="" autocomplete="off" name="url">
+					</div>
+					<p data-v-a619d1ee="" class="mb-1 text-muted">
+						<b data-v-a619d1ee="">ファイル名 :</b>
+					</p>
+					<div data-v-a619d1ee="" class="input-group mb-3">
+						<input data-v-a619d1ee="" type="text" class="form-control" placeholder="ここにファイル名を入力してください" autocomplete="off" name="filename">
+					</div>
+					<p data-v-a619d1ee="" class="mb-1 text-muted">
+						<b data-v-a619d1ee="">フォーマット :</b>
+					</p>
+					<div data-v-a619d1ee="" class="input-group mb-3">
+						<select data-v-a619d1ee="" class="custom-select" name="format"> 
+							<option value="mp4" data-v-a619d1ee="">動画 (MP4形式・itag:18)</option>
+						</select>
+					</div>
+					<div data-v-a619d1ee="" class="d-flex justify-content-center mb-1">
+						<button data-v-a619d1ee="" id="submit" type="submit" class="btn btn-ytmp3">
+							<i data-v-a619d1ee="" class="fas fa-video"></i>変換開始❗️
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div data-v-5d9447fb="" id="convert-box" class="container px-0 px-sm-2-3 mt-4">
+			<div data-v-df0ff4cc="" data-v-5d9447fb="" class="result-container">
+				<div data-v-df0ff4cc="" class="result-card card result-card-hidden">
+					<div data-v-df0ff4cc="" class="card-header text-dark font-weight-bold d-flex justify-content-between align-items-center flex-wrap">
+						<div data-v-df0ff4cc="" class="d-flex align-items-center">
+							<i data-v-df0ff4cc="" class="fas fa-download"></i>ダウンロード
+						</div><!---->
+					</div>
+					<div data-v-df0ff4cc="" class="result-content">
+						<div data-v-df0ff4cc="" class="result-media">
+							<div data-v-df0ff4cc="" class="media-thumbnail">
+								<img data-v-df0ff4cc="" class="thumbnail-img" src="/YouTubeMP3modoki/assets/images/thumbnail_fail.jpg" alt="Video Thumbnail">
+							</div><!--
+							-->
+						</div>
+						<div data-v-df0ff4cc="" class="result-details">
+							<div data-v-df0ff4cc="" class="metadata-section">
+								<div data-v-df0ff4cc="" class="metadata-item">
+									<div data-v-df0ff4cc="" class="metadata-label">動画のタイトル :</div>
+									<div data-v-df0ff4cc="" class="metadata-value">取得中...</div>
+								</div>
+								<div data-v-df0ff4cc="" class="metadata-item">
+									<div data-v-df0ff4cc="" class="metadata-label">動画の URL :</div>
+									<div data-v-df0ff4cc="" class="metadata-value url-value">
+										<a data-v-df0ff4cc="" class="url-link" target="_blank"></a>
+									</div>
+								</div>
+								<div data-v-df0ff4cc="" class="metadata-item">
+									<div data-v-df0ff4cc="" class="metadata-label">フォーマット :</div>
+									<div data-v-df0ff4cc="" class="metadata-value"></div>
+								</div>
+							</div>
+							<div data-v-df0ff4cc="" class="status-section"><!----></div>
+						</div>
+					</div>
+					<div data-v-df0ff4cc="" class="ad-section">
+						<h3 data-v-df0ff4cc="" class="ad-title">
+							<i data-v-df0ff4cc="" class="fas fa-ad"></i>スポンサーリンク
+						</h3>
+						<div data-v-df0ff4cc="" class="ad-content">
+							<iframe data-v-df0ff4cc="" class="ad-iframe" id="ac1493487be" name="ac1493487be" src="https://aladdin.genieesspv.jp/yie/ld/ifk?zoneid=1493487" frameborder="0" scrolling="no"></iframe>
+							<iframe data-v-df0ff4cc="" class="ad-iframe" id="ac1493487be" name="ac1493487be" src="https://aladdin.genieesspv.jp/yie/ld/ifk?zoneid=1493487" frameborder="0" scrolling="no"></iframe>
+							<a data-v-df0ff4cc="" class="ad-banner" href="https://tinyurl.com/3tfwd8uw" target="_blank">
+								<video data-v-df0ff4cc="" loading="lazy" alt="TunePat YouTube MP3 Converter" src="/YouTubeMP3modoki/assets/ads/tunepat-banner-jp-pc.png"></a>
+						</div>
+					</div><!---->
+				</div>
+			</div>
+		</div>
+		<div data-v-5d9447fb="" class="container px-0 px-sm-2-3 mb-4">
+			<div data-v-e971bf60="" data-v-5d9447fb="" class="server-status-container">
+				<div data-v-e971bf60="" class="card">
+					<div data-v-e971bf60="" class="card-header text-dark font-weight-bold d-flex align-items-center">
+						<i data-v-e971bf60="" class="fas fa-server me-2"></i>Server Status 
+						<button data-v-e971bf60="" class="btn btn-sm btn-outline-secondary ml-auto">
+							<i data-v-e971bf60="" class="fas fa-sync-alt mr-0"></i>
+						</button>
+					</div>
+					<div data-v-e971bf60="" class="card-body"><!---->
+						<div data-v-e971bf60="" class="server-grid">
+							<div data-v-e971bf60="" class="server-card server-active server-selected">
+								<div data-v-e971bf60="" class="server-header">
+									<span data-v-e971bf60="" class="server-name">S1</span>
+									<span data-v-e971bf60="" class="server-type normal-badge">Normal</span>
+									<span data-v-e971bf60="" class="server-status-badge status-ok">
+										<span data-v-e971bf60="" class="status-indicator"></span> オンライン
+									</span>
+								</div>
+								<div data-v-e971bf60="" class="server-body">
+									<div data-v-e971bf60="" class="server-metrics">
+										<div data-v-e971bf60="" class="task-indicator">
+											<div data-v-e971bf60="" class="task-bar-container">
+												<div data-v-e971bf60="" class="task-bar" style="width: 100%; background: linear-gradient(to right, rgb(255, 202, 40), rgb(255, 82, 82) 100%);">
+													<div data-v-e971bf60="" class="task-bar-shine"></div>
+												</div>
+											</div>
+											<div data-v-e971bf60="" class="task-text"> Active: 4/4 
+												<span data-v-e971bf60="" class="pending-tasks"> (27人が待機中) </span>
+											</div>
+										</div>
+									</div>
+									<div data-v-e971bf60="" class="server-info">
+										<div data-v-e971bf60="" class="info-row">
+											<span data-v-e971bf60="" class="info-label">Latency:</span>
+											<span data-v-e971bf60="" class="info-value">710ms</span>
+										</div>
+										<div data-v-e971bf60="" class="info-row">
+											<span data-v-e971bf60="" class="info-label">Server version:</span>
+											<span data-v-e971bf60="" class="info-value">6.3.10</span>
+										</div>
+										<div data-v-e971bf60="" class="info-row">
+											<span data-v-e971bf60="" class="info-label">yt-dlp version:</span>
+											<span data-v-e971bf60="" class="info-value">2025.10.28.232931</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-v-e971bf60="" class="server-info-footer mt-5">
+								<div data-v-e971bf60="" class="server-selection-info">
+									<p data-v-e971bf60="" class="text-muted d-flex align-items-center">
+										<i data-v-e971bf60="" class="fas fa-info-circle me-1"></i>
+										利用可能なサーバーの中から自動的に
+										<wbr data-v-e971bf60="">一番負荷の小さいサーバーが選択されます。
+										<br data-v-e971bf60=""> フォーム画面でシリアルコードを入力している場合は、優先的にプレミアムサーバーが使用され、混雑時でも快適に変換できます。 
+									</p>
+								</div>
+								<div data-v-e971bf60="" class="footer-top">
+									<small data-v-e971bf60="" class="text-muted"> 最終更新: 2025/11/01 06:24:23</small>
+									<span data-v-e971bf60="" class="optimal-server-info"> 利用中のサーバー: 
+										<strong data-v-e971bf60="">S1</strong>
+										<span data-v-e971bf60="" class="badge normal-badge">Normal</span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-v-fca19719="" class="snackbar-container"></div>
+		</div>
+ 
+	<div id="about" class="container px-0 px-sm-2-3 mt-0 mb-4">
+		<div class="card">
+			<div class="card-header text-dark font-weight-bold"><i class="fas fa-info-circle"></i>About</div>
+			<div class="card-body msmall px-sm-5">
+				<p>
+					昔あった YouTubeMP3 的な動画ダウンロードサイトです。2018/9/11 から一時閉鎖・譲渡を経て、個人がインターネットの片隅で細々と運営しています。<br>
+					名前の由来も「『YouTubeMP3』もどき」という意味だったのですが、今では元ネタの YouTubeMP3 を知っている人も少なくなりました。早いものです。<br>
+				</p>
+				<p>
+					<a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a> という、事実上開発が停止している <a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtube-dl</a> をベースに多くの改善が行われている CLI 動画ダウンロードツールの Web フロントエンドです。<br>
+					YouTube などの動画サイトの動画を、M4A・MP3・Opus などの音声形式に変換してダウンロードできます。動画をそのまま MP4 や WebM としてダウンロードすることもできます。<br>
+					YouTube の他にもニコニコ動画、SoundCloud など、yt-dlp (youtube-dl) が対応している 2000 以上の動画サイトのダウンロードに対応しています。<br>
+				</p>
+				<p>
+					個人がほぼ惰性で運営しているサイトなので、変なポップアップ広告がドカドカ出てくることはありません。<br>
+					申し訳程度にサーバーの維持費を賄うため少しだけ広告を掲載していますが、不快・不適切な広告が表示されないよう対策しています。<br>
+				</p>
+				<p>
+					また、PWA (Progressive Web Apps) という、Web サービスをアプリとしてインストールできる技術に対応しています。<br>
+					YouTubeMP3もどきを「<a href="https://support.google.com/chrome/answer/9658361" target="_blank">ホーム画面に追加</a>」することで、デスクトップやアプリ一覧からネイティブアプリのように起動することもできます。<br>
+				</p>
+				<p class="mb-0">
+					<a href="https://twitter.com/YTMP3modoki" target="_blank">Twitter@YTMP3modoki</a> ではYouTubeMP3もどきに関する様々な情報を発信しています。<br>
+					サービスの停止 / 復旧などについてのアナウンスもこちらでツイートしています。ぜひフォローしていただけるとありがたいです。<br>
+				</p>
+			</div>
+		</div>
+	</div>
+ 
+	<div id="usage" class="container px-0 px-sm-2-3 mt-4 mb-4">
+		<div class="card">
+			<div class="card-header text-dark font-weight-bold"><i class="fas fa-question-circle"></i>Usage</div>
+			<div class="card-body">
+				<ol class="mb-0 msmall pl-3 px-md-5">
+					<li><b>変換・ダウンロードしたい動画の URL をコピペして入力してください。</b></li>
+					<ul>
+						<li>YouTube の他にもニコニコ動画など数多くの動画サイトのダウンロードに対応しています。</li>
+						<li>MP3・MP4・WAV といった音声形式以外にも MP4・WebM といった動画でのダウンロードも可能です。</li>
+					</ul>
+					<li><b>ダウンロードするときのファイル名を入力してください（任意）。</b></li>
+					<ul>
+						<li><b>ファイル名を入力しない場合、自動で動画のタイトルがファイル名になります。</b></li>
+						<li>日本語の動画タイトルの取得にも対応しています。</li>
+					</ul>
+					<li>フォーマットは現時点で 音声 (M4A形式)・音声 (MP3形式)・音声 (Opus形式)・音声 (WAV形式)・動画 (MP4形式・元画質)・動画 (MP4形式・1080p)・動画 (MP4形式・720p)・動画 (MP4形式・540p)・動画 (MP4形式・480p)・動画 (MP4形式・360p)・動画 (WebM形式・4K対応)・動画 (その他の形式) を選択できます。</li>
+					<ul>
+						<li>ダウンロードしたいフォーマットを選択してください。</li>
+						<li><b>［動画(MP4形式・元画質)］に設定すると、変換元の動画で選択できる最高画質でダウンロードできます。</b>(元動画の最大画質が 1080p・60fps ならその画質でダウンロードされます。)</li>
+						<li>基本的にはダウンロードしたいのが動画なら MP4 、音声なら M4A か MP3 を選んでおけば大丈夫だと思います。</li>
+						<li><b>M4A は MP3 ほどメジャーではありませんが、<u>MP3 とほぼ同じように扱え、さらに変換が早いのでおすすめです。</u></b></li>
+						<ul>
+							<li>サーバー負荷の増大にともないプロセス優先度や CPU 使用率を制限するようにしたため、<b>以前よりも MP3 への変換が遅くなりました。</b></li>
+							<li>再エンコードを行わないため変換が早くなっています。<b>サーバー負荷も大幅に低減できるため、M4A の方が運営としても助かります。</b></li>
+						</ul>
+						<li><b>Opus は MP3 や M4A よりも高音質な音声フォーマットで、YouTube では Opus を選択することで最も良い音質で変換できます。</b></li>
+						<ul>
+							<li>ただし、YouTube の中でも何年も前の古い動画などでは用意されていない事があり、その場合は M4A などから再エンコードされるため、音質はほとんど変わりません。</li>
+							<li>また、Opus フォーマットは YouTube 以外で対応しているサイトはあまりありません。そのサイトが Opus フォーマットを用意していなかった場合も同様に再エンコードされるため、YouTube 以外ではあまり意味がないと思います。</li>
+							<li>再生できるプレイヤーが限られるため汎用性には欠けますが、できるだけ高音質で聞きたい方におすすめです。</li>
+						</ul>
+						<li><b>YouTube の 4K 以上の画質設定がある動画は、［動画 (WebM形式・4K対応)］を選択すると 4K 以上の画質でダウンロードできます。</b></li>
+						<li>そのほか、お好みでオプションも設定してください。</li>
+					</ul>
+					<li>［変換開始］ボタンをクリック or タップしてしばらくすると［ファイルをダウンロード］ボタンとプレビューが表示されます。</li>
+					<ul>
+						<li>［アルバムアートワーク］は、iTunes などの音楽プレイヤーのジャケット画像用に、動画のサムネイルを正方形にトリミングしたものです。</li>
+						<ul>
+							<li>アコーディオンメニューを開き、［ダウンロード］をクリック or タップでダウンロードできます。</li>
+						</ul>
+						<li>［ファイルをダウンロード］ボタンをクリック or タップすると、ファイルがダウンロードされます。</li>
+					</ul>
+				</ol>
+			</div>
+		</div>
+	</div>
+ 
+	<div id="note" class="container px-0 px-sm-2-3 mt-4 mb-6">
+		<div class="card">
+			<div class="card-header text-dark font-weight-bold"><i class="fas fa-sticky-note"></i>Note</div>
+			<div class="card-body">
+				<ul class="mb-3 msmall pl-3 px-md-5">
+					<li><b>ベストエフォート型のため、サーバーの負荷が高まると変換に失敗することがあります。サービスの安定稼働は保証されていません。</b></li>
+					<ul>
+						<li><b>確実に高速にダウンロード・変換したい方向けに、<a href="https://ytmp3modoki.fanbox.cc/" target="_blank">FANBOX 支援者の方には限定記事にて「優先高速変換チケット」を公開しています！</a></b></li>
+						<li>チケットをお持ちの方は、<b>より確実にダウンロードできる専用サーバーに接続し、混雑時でも高速にダウンロードできます。</b>要は某テーマパークのファストパス的なものです。</li>
+                        <li><b>負荷対策のため、変換サーバーは 04:00 / 10:00 / 16:00 / 22:00 に再起動されます。再起動タイミングを跨いだ変換セッションは破棄されますので、あらかじめご了承ください。</b></li>
+					</ul>
+					<li><b>変換したファイルは、変換完了から30分後に自動的にサーバーから削除されます。</b></li>
+					<ul>
+						<li>変換完了後も放置していると、せっかく変換したのにダウンロードできなくなってしまいます。<br>変換が完了次第、お早めのダウンロードをおすすめします。</li>
+					</ul>
+					<li><b>変換に失敗する際は、何度か再度変換してみるとうまくいくことがあります。</b></li>
+					<ul>
+						<li>何度も変換してもエラーが発生する場合は、その動画サイトに仕様変更があった可能性が高いです。</li>
+						<li>自動的に最新版の yt-dlp に更新される仕様になっていますが、yt-dlp 側で仕様変更に対応されないと、このサイトでも対応は難しいです。</li>
+						<li>また、サーバーの負荷が高まった場合にも、同様に変換に失敗することがあります。しばらく時間をおいてから再度お試しください。</li>
+					</ul>
+                    <li><b>仕様上の制限：</b></li>
+                    <ul>
+                        <li><b>4K や1時間を超える長さの動画は変換に失敗することが多いです。</b></li>
+                        <ul>
+                            <li>ファイルサイズが 10GB を超える動画はサーバーのストレージが足りず、大半の場合変換に失敗します。</li>
+                            <li>特に GB 級になるとストレージが圧迫されるため、できれば 4K 動画の変換は避けてほしいというのが正直なところです…</li>
+                        </ul>
+                        <li><b>WAV 形式には動画のサムネイルをカバーアートとして埋め込むことができません。</b></li>
+                        <ul>
+                            <li>WAV 形式自体がカバーアートの埋め込みに対応していないためです。</li>
+                            <li>このほか、Windows Media Player などの一部のプレイヤーでは、埋め込んだサムネイルが表示されないことがあります。</li>
+                        </ul>
+                        <li><b>YouTube などの動画を埋め込んでいるサイト（まとめサイトなど）の URL を入力した場合、基本的にダウンロードできません。</b></li>
+                        <ul>
+                            <li>埋め込まれている元の動画の URL でもう一度試してみてください。</li>
+                            <li><b>一見動画サイトのように見えるが実は他の動画サイトの動画を埋め込んでいるだけ、というサイトも割とあります。</b></li>
+                        </ul>
+                        <li><b>指定した画質が動画サイト側に存在しない場合、自動的に指定した画質に一番近い画質でダウンロードされます。</b></li>
+                        <li><b>ファイル名に半角のスラッシュ (/)・クエスチョンマーク (?) などの特殊文字が含まれている場合、ファイルシステムで扱えるよう、ダウンロード時にそれぞれ全角文字に変換されます。</b></li>
+                    </ul>
+					<li><b>動作確認は PC / Android は最新の Chrome 、iPhone / iPad は最新の Safari (iOS / iPadOS 17 以上) で行っています。</b></li>
+					<ul>
+						<li>上記環境以外での動作は保証しません。特に OS が古い iPhone / iPad Safari では動作しない可能性が高いです。</li>
+						<li>現状 PC Chrome 以外での動作確認はあまりできていないため、もし不具合があるようでしたらご連絡いただけると助かります。</li>
+					</ul>
+					<li><b>不具合報告や要望は <a href="https://twitter.com/YTMP3modoki" target="_blank">Twitter</a> のリプライや DM にて受け付けています。</b></li>
+					<ul>
+						<li>Twitter の DM は確認頻度が低いため、メールよりも返信が遅くなる可能性があります。</li>
+						<li>メールでのお問い合わせは <code>ytmp3modoki⭐️gmail.com</code> までお願いします (<code>⭐️</code> を <code>@</code> に変えてください) 。</li>
+					</ul>
+					<li>
+						このサイトのバックエンドには <a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a>（2000 以上の動画サイトのダウンロードに対応）と
+						<a href="https://www.ffmpeg.org/" target="_blank">ffmpeg</a>（メディア変換ソフト）を使用しています。
+					</li>
+					<li>このサイトは、Amazon.co.jp を宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazon アソシエイト・プログラムの参加者です。</li>
+				</ul>
+                <ul class="mb-3 msmall pl-3 px-md-5">
+					<li>release ver.6.3.x</li>
+					<ul>
+						<li>日々厳しさを増す YouTube からのアクセス規制をなるべく回避できるようプロキシ構成を改良</li>
+						<li>YouTube からのアクセス規制による変換失敗をなるべく回避できるようダウンロードメソッドを調整</li>
+                        <li>多言語の音声トラックが存在する YouTube 動画で常に英語音声でダウンロードされてしまう問題を修正</li>
+						<li>VP9/AV1/Opus でのダウンロード時に一度 MP4 や M4A 形式でダウンロードしておかないとダウンロード時に YouTube から 403 エラーが返されることがある問題を修正</li>
+						<li>動画・音声のカット処理を行った際に動画のサムネイルやメタデータがファイルに書き込まれない問題を修正</li>
+						<li>一部の YouTube 動画で低画質なサムネイルが選定されることがある問題を修正</li>
+						<li>そのほか細かな修正</li>
+					</ul>
+					<li>release ver.6.2.x</li>
+					<ul>
+						<li>UI デザインを改善</li>
+						<li>YouTube からのアクセス規制をなるべく回避できるようインフラ周りを調整</li>
+						<li>サーバーの自動メンテナンス動作の安定性を改善</li>
+					</ul>
+					<li>release ver.6.1.x</li>
+					<ul>
+						<li>最新のサーバーステータスを表示する UI を追加</li>
+						<li>UI デザインの改善</li>
+					</ul>
+					<li><b>release ver.6.0.x</b></li>
+					<ul>
+						<li>バックエンドを完全に書き直し、動作安定性とパフォーマンスを大幅に改善</li>
+                        <li>UI を保ちながらフロントエンドを完全に書き直し、ユーザー体験を向上</li>
+                        <li>FANBOX 支援者向けに混雑時でも優先して高速ダウンロードが可能な「優先高速変換チケット」に対応</li>
+						<li>再び YouTube の動画のダウンロード・変換に対応</li>
+                        <li>多数の不具合修正・エラーハンドリングの強化</li>
+					</ul>
+				</ul>
+                <ul class="mb-3 msmall pl-3 px-md-5">
+					<li>release ver.5.12.0</li>
+					<ul>
+						<li>バックエンドの再実装が完了するまでの繋ぎとして、サーバー台数を増強</li>
+					</ul>
+					<li>release ver.5.11.0</li>
+					<ul>
+						<li>バックエンドのフォーマット選択コマンドを最新の yt-dlp に合わせて更新</li>
+						<li>YouTube で MP4 形式でダウンロードした際に映像コーデックが H.264 ではなく AV1 になる問題を修正</li>
+					</ul>
+					<li>release ver.5.10.0</li>
+					<ul>
+						<li>リファクタリングと API の実装仕様を変更し、動作安定性と確実性を大幅に向上した</li>
+						<li>サーバー構成を2台体制に変更</li>
+						<li>様々な不具合の修正</li>
+					</ul>
+					<li>release ver.5.9.0</li>
+					<ul>
+						<li>サーバーをスペックの高い新サーバーに移転し、Docker 構成に移行</li>
+						<li>様々な不具合修正と動作安定性の向上</li>
+					</ul>
+					<li>release ver.5.8.0</li>
+					<ul>
+						<li>youtube-dl の更新の停滞に伴い、バックエンドを yt-dlp に置換</li>
+					</ul>
+					<li>release ver.5.7.0</li>
+					<ul>
+						<li>タイトル・サムネイルの取得ロジックをより負荷のかからない方法で実装し直した</li>
+						<li>累積的な不具合をまとめて修正</li>
+					</ul>
+					<li>release ver.5.6.0</li>
+					<ul>
+						<li>同時に変換できるセッションを 4 までに制限した</li>
+						<li>新たに Opus 形式への変換に対応</li>
+						<li>変換パラメータの調整</li>
+						<li>M4A 形式で変換するとダウンロード時に拡張子が MP3 になってしまう不具合を修正</li>
+					</ul>
+					<li>release ver.5.5.0</li>
+					<ul>
+						<li>「利用可能であれば AV1 動画コーデックを有効にする」オプションを追加した</li>
+					</ul>
+					<li>release ver.5.4.0</li>
+					<ul>
+						<li>サーバー負荷の増大にともない、変換ごとのプロセス優先度を下げ、CPU 使用率を制限するようにした</li>
+						<li>接続がリセットされた場合などにエラーメッセージを表示するようにした</li>
+					</ul>
+					<li>release ver.5.3.0</li>
+					<ul>
+						<li>変換（ダウンロード）する範囲を 00:01:23 のような形式で指定できるようにした</li>
+						<li>上記に伴うスタイル・表示の一部変更</li>
+						<li>毎回サーバーのディスク容量が一杯になったと判断されファイルが削除されてしまい、変換に失敗することがあったのを修正</li>
+					</ul>
+					<li>release ver.5.2.0</li>
+					<ul>
+						<li>SoundCloud の一部の track でサムネイルやアートワークの取得に失敗する問題を修正</li>
+						<li>サーバーのディスク容量が一杯になった際に自動でダウンロードされたファイルを削除するようにした</li>
+					</ul>
+					<li>release ver.5.1.0</li>
+					<ul>
+						<li>YouTube の動画が規制によりダウンロードできない問題を修正</li>
+						<li>フォーマットとオプションを変換時に予め保存し、次回サイトに訪れた際に以前の設定内容を復元できるようにした</li>
+					</ul>
+					<li><b>release ver.5.0.0</b></li>
+					<ul>
+						<li>譲り受けたコードを参照しつつソースコードを一から書き直す形で公開</li>
+						<li>UI の刷新 (Bootstrap4)</li>
+						<li>進捗表示のロジックを変更・詳細に進捗状況が把握できるようにした</li>
+						<li>ダウンロード中に 403 Forbidden になった場合に 3 回まで自動でレジュームするようにした</li>
+						<li>その他コードの大規模な整頓・レジュームの有効化・機能の整理など</li>
+					</ul>
+				</ul>
+                <ul class="mb-0 msmall pl-3 px-md-5">
+					<li>今日の変換回数: <span id="today-count">1870</span>回</li>
+					<li>総変換回数: <span id="total-count">11360955</span>回</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+ 
+	<footer class="footer bg-dark pt-5 pb-5">
+		<div class="container d-flex flex-column align-items-center align-items-sm-end">
+			<div class="d-inline text-white text-center text-sm-right mb-2">
+				yt-dlp (youtube-dl) ver.<span id="youtube-dl-version">2025.10.28.232931</span><br>
+				ver.<span id="version">6.3.10</span>
+			</div>
+			<div class="d-inline text-white text-center text-sm-right">
+				<span class="mr-1">© 2018 - 2025</span>
+				<span class="mr-1">YouTubeMP3もどき</span>
+				<br class="d-inline d-sm-none">
+				<img id="counter" src="https://shamimomo.net/dream/dream.cgi?id=YouTubeMP3modoki&amp;gif=1" loading="lazy" alt="YouTubeMP3もどき アクセスカウンター">
+			</div>
+		</div>
+	</footer>
+ 
+    <script>
+        // スクロールをスムーズに
+        $('a[data-href^="#"]').click(function(event){
+            const speed = 500;
+            const href= $(this).attr('data-href');
+            const target = $(href == '#' || href == '' ? 'html' : href);
+            const maxposition = $(document).height() - $(window).height();
+            let position = target.offset().top - 70;
+            if (position < 0){
+                position = 0;
+            } else if (maxposition < position) {
+                position = maxposition;
+            }
+            $('html, body').animate({ scrollTop:position }, speed, 'swing');
+            return false;
+        });
+    </script>
+ 
+ 
+</body></html>

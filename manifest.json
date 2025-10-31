@@ -1,0 +1,36 @@
+{
+    "name": "YouTubeMP3もどき",
+    "short_name": "YouTubeMP3もどき",
+    "start_url": "/YouTubeMP3modoki/",
+    "scope": ".",
+    "display": "standalone",
+    "background_color": "#f0f0f0",
+    "theme_color": "#f0f0f0",
+    "description": "YouTubeMP3modoki PWA App.",
+    "dir": "ltr",
+    "lang": "ja-JP",
+    "related_applications": [ ],
+    "prefer_related_applications": false,
+    "icons": [
+      {
+        "src": "/YouTubeMP3modoki/assets/images/icons/icon-96x96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "/YouTubeMP3modoki/assets/images/icons/icon-144x144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/YouTubeMP3modoki/assets/images/icons/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/YouTubeMP3modoki/assets/images/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
