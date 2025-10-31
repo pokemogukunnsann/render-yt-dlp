@@ -91,78 +91,103 @@ def get_realtime_status():
 # ----------------------------------------------------
 ## 🔗 ダウンロードリンク取得エンドポイント (本処理)
 # ----------------------------------------------------
-
 @app.route('/get_download_link', methods=['POST'])
 def get_download_link():
-    """動画の直接ストリームリンクを取得するAPIエンドポイント"""
+    """動画の直接ストリームリンクを取得し、結果HTMLを返すエンドポイント"""
 
-    # サーバーが利用可能かチェック
     if SERVER_STATUS != 'ACTIVE':
-        return jsonify({"status": "error", "message": "サーバーが現在利用できません。/healthを確認してください。"}), 503
+        return render_template('error.html', message="サーバーが現在利用できません。/healthを確認してください。")
     
     data = request.form
     url = data.get('url')
-    print_value_with_label("url", url)
+    user_filename = data.get('filename', '').strip() # ユーザー入力を取得
+    cookies_str = data.get('cookies_str')
     
-    format_selector = '18' 
-    print_value_with_label("format_selector", format_selector)
+    print_value_with_label("url", url)
+    print_value_with_label("user_filename", user_filename)
+    print_value_with_label("cookies_str received", bool(cookies_str))
 
     if not url:
-        return jsonify({"status": "error", "message": "動画のURLが指定されていません。"})
+        return render_template('error.html', message="動画のURLが指定されていません。")
     
-    # yt-dlp オプションの設定
+    format_selector = '18' 
     ydl_opts = {
         'format': format_selector,
         'quiet': True,              
         'simulate': True,           
         'skip_download': True,      
         'noplaylist': True,
+        'no_warnings': True,        
+        'no_cache_dir': True,       # Read-only file system対策
         'default_search': 'ytsearch',
+        'cookiefile': None, 
     }
 
+    temp_cookie_file = None
+    if cookies_str:
+        try:
+            with tempfile.NamedTemporaryFile(mode='w', delete=False, dir='/tmp', encoding='utf-8') as tmp_file:
+                tmp_file.write(cookies_str)
+                temp_cookie_file = tmp_file.name
+                
+            ydl_opts['cookiefile'] = temp_cookie_file
+            print_value_with_label("temp_cookie_file path", temp_cookie_file)
+            
+        except Exception as e:
+            print(f"一時クッキーファイルの作成に失敗しました: {e}")
+
     try:
-        # 同期処理のため、処理中にユーザーがリロードするとエラーになる可能性がある
-        # 実際にはここに CURRENT_TASKS にタスクIDを登録する処理を入れる（非同期の場合）
-        
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=False)
         
-        # itag:18 のストリームを探す
-        target_format = None
-        for fmt in info_dict.get('formats', []):
-            if str(fmt.get('format_id')) == format_selector:
-                target_format = fmt
-                break
+        target_format = next((fmt for fmt in info_dict.get('formats', []) if str(fmt.get('format_id')) == format_selector), None)
         
-        # リンクの決定
-        if target_format:
+        if target_format and target_format.get('url'):
             final_link = target_format.get('url')
         else:
-            final_link = info_dict.get('url') # 代替リンク
+            final_link = info_dict.get('url')
             if not final_link:
-                 return jsonify({
-                    "status": "error", 
-                    "message": "ストリームリンクが見つかりませんでした。動画IDを確認してください。"
-                }), 404
+                 return render_template('error.html', message="ストリームリンクが見つかりませんでした。動画IDを確認してください。")
+
+        # --- 💡 ファイル名優先順位ロジック ---
+        download_title = info_dict.get('title', 'video')
+
+        if user_filename:
+            base_name = user_filename
+        else:
+            base_name = download_title
+
+        safe_filename = "".join(c for c in base_name if c.isalnum() or c in (' ', '_', '-')).rstrip()
         
-        download_title = info_dict.get('title', '不明な動画')
-        print_value_with_label("Final Link", final_link)
+        if not safe_filename:
+             safe_filename = 'video'
+             print_value_with_label("Filename Source", "Default 'video'")
+        # --------------------------------------
+
+        curl_command = f"curl -L '{final_link}' -o '{safe_filename}.mp4'"
         
-        response = {
-            "status": "success",
-            "title": download_title,
-            "stream_link": final_link,
-            "message": f"動画ストリームリンクを取得しました。このリンクをcurlで使用できます。"
-        }
-        
-        print(f"Response data (raw):{response}")
-        return jsonify(response)
+        print_value_with_label("Download Title", download_title)
+        print_value_with_label("Final Filename (safe)", safe_filename)
+        print_value_with_label("Curl Command", curl_command)
+
+        return render_template('result.html', title=download_title, stream_link=final_link, curl_command=curl_command)
 
     except yt_dlp.utils.DownloadError as e:
-        return jsonify({"status": "error", "message": f"動画情報の取得中にエラーが発生しました: {e}"}), 400
+        error_msg = str(e)
+        if "Sign in to confirm you’re not a bot" in error_msg:
+             display_msg = "🚫 YouTubeによる認証エラーが発生しました。クッキーを入力して再試行するか、別の動画を試してください。"
+        else:
+             display_msg = f"動画情報の取得中にエラーが発生しました: {error_msg}"
+        return render_template('error.html', message=display_msg)
+    
     except Exception as e:
         print(f"予期せぬエラーが発生しました: {e}")
-        return jsonify({"status": "error", "message": f"サーバーエラー: {e}"}), 500
+        return render_template('error.html', message=f"サーバー側で予期せぬエラーが発生しました: {e}")
+
+    finally:
+        if temp_cookie_file and os.path.exists(temp_cookie_file):
+            os.unlink(temp_cookie_file)
+            print_value_with_label("Deleted temp_cookie_file", temp_cookie_file)
 
 if __name__ == '__main__':
     app.run(debug=True)
