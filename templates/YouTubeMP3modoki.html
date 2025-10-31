@@ -1363,6 +1363,8 @@
 			<div data-v-df0ff4cc="" data-v-5d9447fb="" class="result-container">
 				<div data-v-df0ff4cc="" class="result-card card result-card-hidden">
 					<div class="container">
+        {% if success_status %}
+    <div class="card mt-4 p-4">
         <h2 class="text-center">✅ リンク取得完了</h2>
         <div class="result-box">
             <h5 class="mb-3">動画タイトル: <strong>{{ title }}</strong></h5>
@@ -1370,6 +1372,7 @@
             
             <h6 class="mt-4">💡 動画ストリームリンク (itag:18):</h6>
             <code id="stream-link">{{ stream_link }}</code>
+			<a href="{{ stream_link }}" target="_blank" download="{{ filename }}">{{ filename }}で動画をダウンロードします。(失敗する可能性:1%未満)</a>
 
             <h6 class="mt-4">💻 ダウンロード用 curl コマンド:</h6>
             <p class="text-muted msmall">
@@ -1382,6 +1385,24 @@
             </div>
         </div>
     </div>
+    {% endif %}
+
+    {% if error_message %}
+    <div class="card mt-4 p-4">
+        <h2 class="text-center">🚨 エラー</h2>
+        <div class="error-box">
+            <h5 class="mb-3">エラーメッセージ:</h5>
+            <p>{{ error_message }}</p>
+            <hr>
+            <p class="text-muted msmall">
+                URLが正しいか、またはログインが必須の動画ではないか確認してください。
+            </p>
+            <div class="text-center">
+                <a href="/" class="btn btn-danger mt-4">↩ 戻って再試行</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 					<div data-v-df0ff4cc="" class="result-content">
 						<div data-v-df0ff4cc="" class="result-media">
 							<div data-v-df0ff4cc="" class="media-thumbnail">
