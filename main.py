@@ -190,7 +190,7 @@ def get_download_link():
         print_value_with_label("Final Filename (safe)", safe_filename)
         print_value_with_label("Curl Command", curl_command)
 
-        return render_template('result.html', title=download_title, stream_link=final_link, curl_command=curl_command)
+        return render_template('YouTubeMP3modoki.html', filename=safe_filename, title=download_title, stream_link=final_link, curl_command=curl_command)
 
     except subprocess.CalledProcessError as e:
         # 💡 コマンド実行エラーの捕捉
