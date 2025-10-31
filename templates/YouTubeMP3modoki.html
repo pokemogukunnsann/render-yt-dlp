@@ -1362,11 +1362,26 @@
 		<div data-v-5d9447fb="" id="convert-box" class="container px-0 px-sm-2-3 mt-4">
 			<div data-v-df0ff4cc="" data-v-5d9447fb="" class="result-container">
 				<div data-v-df0ff4cc="" class="result-card card result-card-hidden">
-					<div data-v-df0ff4cc="" class="card-header text-dark font-weight-bold d-flex justify-content-between align-items-center flex-wrap">
-						<div data-v-df0ff4cc="" class="d-flex align-items-center">
-							<i data-v-df0ff4cc="" class="fas fa-download"></i>ダウンロード
-						</div><!---->
-					</div>
+					<div class="container">
+        <h2 class="text-center">✅ リンク取得完了</h2>
+        <div class="result-box">
+            <h5 class="mb-3">動画タイトル: <strong>{{ title }}</strong></h5>
+            <hr>
+            
+            <h6 class="mt-4">💡 動画ストリームリンク (itag:18):</h6>
+            <code id="stream-link">{{ stream_link }}</code>
+
+            <h6 class="mt-4">💻 ダウンロード用 curl コマンド:</h6>
+            <p class="text-muted msmall">
+                ターミナルでこのコマンドをコピーして実行するとダウンロードが開始されます。
+            </p>
+            <code id="curl-command">{{ curl_command }}</code>
+            
+            <div class="text-center">
+                <a href="/" class="btn btn-primary mt-4">↩ 別の動画を試す</a>
+            </div>
+        </div>
+    </div>
 					<div data-v-df0ff4cc="" class="result-content">
 						<div data-v-df0ff4cc="" class="result-media">
 							<div data-v-df0ff4cc="" class="media-thumbnail">
