@@ -97,126 +97,88 @@ def get_realtime_status():
 #']))))))'jihihihuhjhjhuhuhuhugygyggftftftdtdfdrdbh
 @app.route('/get_download_link', methods=['POST'])
 def get_download_link():
-    """動画の直接ストリームリンクを取得し、結果HTMLを返すエンドポイント"""
+    url = request.form['url']
+    print_value_with_label("Received URL", url)
 
-    if SERVER_STATUS != 'ACTIVE':
-        return render_template('error.html', message="サーバーが現在利用できません。/healthを確認してください。")
+    # YouTube動画IDの抽出ロジック
+    parsed_url = urlparse(url)
+    video_id = ''
     
-    data = request.form
-    url = data.get('url')
-    user_filename = data.get('filename', '').strip()
-    cookies_str = data.get('cookies_str')
+    # 標準URL (v=...) からの抽出
+    if 'v' in parse_qs(parsed_url.query):
+        video_id = parse_qs(parsed_url.query)['v'][0]
+    # Shorts URL (/shorts/...) からの抽出
+    elif parsed_url.path.startswith('/shorts/'):
+        path_segments = parsed_url.path.split('/')
+        if len(path_segments) > 2:
+             video_id = path_segments[2]
+    print_value_with_label("Video ID", video_id)
     
-    print_value_with_label("url", url)
-    print_value_with_label("user_filename", user_filename)
-    print_value_with_label("cookies_str received", bool(cookies_str))
+    if not video_id:
+        return render_template('index.html', error_message="❌ 有効なYouTube URLではありませんでした。")
 
-    if not url:
-        return render_template('error.html', message="動画のURLが指定されていません。")
+    download_title = 'video' 
+    final_link = ''
     
-    format_selector = '18' 
-    temp_cookie_file = None
-    
-    # 💡 クッキーファイル作成ロジック (変更なし)
-    if cookies_str:
-        try:
-            with tempfile.NamedTemporaryFile(mode='w', delete=False, dir='/tmp', encoding='utf-8') as tmp_file:
-                tmp_file.write(cookies_str)
-                temp_cookie_file = tmp_file.name
-                
-            print_value_with_label("temp_cookie_file path", temp_cookie_file)
-            
-        except Exception as e:
-            print(f"一時クッキーファイルの作成に失敗しました: {e}")
-
+    # 💡 Innertubeクライアントを初期化（WEBクライアントは最もブラウザに近い振る舞いをします）
     try:
-        # --- 💡 yt-dlp コマンドライン実行の構築 ---
-        command = [
-            sys.executable,  # 💡 現在のPythonインタープリタのフルパス
-            '-m', 'yt_dlp',
-            '--format', format_selector,  # '18'
-            '--skip-download',
-            '--simulate',
-            '--print-json',              # JSONで情報を出力
-            '--no-warnings',
-            '--no-cache-dir',            # Read-only file system対策
-            '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36', # UAを追加
-        ]
-        
-        if temp_cookie_file:
-            command.extend(['--cookie-file', temp_cookie_file])
+        client = InnerTube(Client.WEB) 
+        print_value_with_label("Innertube Client Initialized", Client.WEB.value)
 
-        command.append(url)
+        # 1. 動画情報の取得
+        # Innertubeは自動的にAPIを叩き、ストリーミングデータを復号化してくれます。
+        info = client.get_info(video_id=video_id)
         
-        print_value_with_label("Executing Command", " ".join(command))
+        # 2. 動画タイトルの取得
+        download_title = info.title
+        print_value_with_label("Video Title", download_title)
+
+        # 3. 最適なストリーミングフォーマットの選択
+        # Innertubeの返却データは辞書構造です。hls_manifest_urlがあれば、これが最も確実です。
+        stream_url = info.streaming_data.get('hls_manifest_url')
         
-        # サブプロセスとしてyt-dlpを実行
-        result = subprocess.run(
-            command,
-            capture_output=True,
-            text=True,
-            check=True # ゼロ以外の終了コードでCalledProcessErrorを発生させる
-        )
+        # HLS manifestがない場合、formatsから最高のストリームを探す（通常はMP4）
+        if not stream_url and info.streaming_data.get('formats'):
+             # ここでは、品質を考慮せず、利用可能な最初のストリームURLをフォールバックとして使用
+            stream_url = info.streaming_data['formats'][0].get('url')
 
-        # 標準出力からJSONを解析
-        try:
-            info_dict = json.loads(result.stdout)
-        except json.JSONDecodeError:
-            # yt-dlpが出力したエラーメッセージをキャプチャし、エラーとして処理
-            error_output = result.stderr or result.stdout
-            raise Exception(f"yt-dlpの応答を解析できませんでした。エラー出力:\n{error_output}")
+        if not stream_url:
+            # 💡 Innertubeが認証不要でも取得できない場合は、ストリーミングデータ自体が存在しない
+            # (非公開、削除済み、または非常に厳格なDRMがかかっている)
+            raise Exception("ストリーミングURLが見つかりませんでした。動画が非公開または削除されている可能性があります。")
         
-        # --- リンク決定ロジック (info_dictを使うため変更なし) ---
-        target_format = next((fmt for fmt in info_dict.get('formats', []) if str(fmt.get('format_id')) == format_selector), None)
-        
-        if target_format and target_format.get('url'):
-            final_link = target_format.get('url')
-        else:
-            final_link = info_dict.get('url')
-            if not final_link:
-                 return render_template('error.html', message="ストリームリンクが見つかりませんでした。動画IDを確認してください。")
+        final_link = stream_url
+        print_value_with_label("Final Stream URL", final_link)
 
-        # --- ファイル名優先順位ロジック (変更なし) ---
-        download_title = info_dict.get('title', 'video')
-
-        if user_filename:
-            base_name = user_filename
-        else:
-            base_name = download_title
-
-        safe_filename = "".join(c for c in base_name if c.isalnum() or c in (' ', '_', '-')).rstrip()
-        
-        if not safe_filename:
-             safe_filename = 'video'
-
-        curl_command = f"curl -L '{final_link}' -o '{safe_filename}.mp4'"
-        
-        print_value_with_label("Final Filename (safe)", safe_filename)
-        print_value_with_label("Curl Command", curl_command)
-
-        return render_template('YouTubeMP3modoki.html', filename=safe_filename, title=download_title, stream_link=final_link, curl_command=curl_command)
-
-    except subprocess.CalledProcessError as e:
-        # 💡 コマンド実行エラーの捕捉
-        error_output = e.stderr or e.stdout
-        
-        if "Sign in to confirm you’re not a bot" in error_output:
-             display_msg = "🚫 YouTubeによる認証エラーが発生しました。クッキーを入力して再試行するか、別の動画を試してください。"
-        else:
-             # その他のコマンドラインエラー
-             display_msg = f"yt-dlpコマンド実行中にエラーが発生しました。\n詳細:\n{error_output}"
-        return render_template('error.html', message=display_msg)
-    
     except Exception as e:
-        # 💡 その他の予期せぬエラー
-        print(f"予期せぬエラーが発生しました: {e}")
-        return render_template('error.html', message=f"サーバー側で予期せぬエラーが発生しました: {e}")
+        error_message = f"🛑 Innertube処理中にエラーが発生しました: {e}"
+        print(error_message)
+        return render_template('index.html', error_message=error_message)
 
-    finally:
-        # 💡 処理完了後、一時クッキーファイルを削除 (変更なし)
-        if temp_cookie_file and os.path.exists(temp_cookie_file):
-            os.unlink(temp_cookie_file)
-            print_value_with_label("Deleted temp_cookie_file", temp_cookie_file)
+    # --- 成功時の処理 ---
+    if final_link.endswith('.m3u8'):
+        file_ext = 'm3u8'
+    else:
+        # Innertubeのストリームは通常MP4形式です
+        file_ext = 'mp4' 
+        
+    # ファイル名のサニタイズ
+    sanitized_title = "".join(c for c in download_title if c.isalnum() or c in (' ', '_', '-')).rstrip()
+    filename = f"{sanitized_title}.{file_ext}"
+    
+    # html以外でリクエストするときは絶対にcurlコマンドで実行する
+    curl_command = f'curl -L -o "{filename}" "{final_link}"'
+
+    print_value_with_label("File Name", filename)
+    print_value_with_label("Curl Command", curl_command)
+
+    return render_template('index.html', 
+        download_link=final_link, 
+        curl_command=curl_command, 
+        filename=filename,
+        title=download_title,
+        message="✅ ダウンロードリンクの取得に成功しました。curlコマンドをコピーして実行してください。😊"
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
