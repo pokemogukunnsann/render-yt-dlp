@@ -99,7 +99,7 @@ def get_realtime_status():
 #']))))))'jihihihuhjhjhuhuhuhugygyggftftftdtdfdrdbh
 @app.route('/get_download_link', methods=['POST'])
 def get_download_link():
-    client = InnerTube("WEB") 
+    client = InnerTube("YOUTUBE") 
     print_value_with_label("Innertube Client Initialized", "WEB")
     url = request.form['url']
     print_value_with_label("Received URL", url)
