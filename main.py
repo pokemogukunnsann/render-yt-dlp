@@ -126,6 +126,8 @@ def get_download_link():
     
     # 💡 Innertubeクライアントを初期化（WEBクライアントは最もブラウザに近い振る舞いをします）
     try:
+        CLIENT_TYPE = "ANDROID" # または "WEB", "YOUTUBE_MUSIC" など
+        CLIENT_VERSION = "19.01.35" # 安定版のバージョン番号を仮定
         client = InnerTube(Client.WEB) 
         print_value_with_label("Innertube Client Initialized", Client.WEB.value)
 
