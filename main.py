@@ -6,6 +6,8 @@ from flask import Flask, request, jsonify, render_template
 import yt_dlp
 import datetime
 import sys
+from urllib.parse import urlparse, parse_qs 
+from innertube import InnerTube, Client
 
 app = Flask(__name__)
 
